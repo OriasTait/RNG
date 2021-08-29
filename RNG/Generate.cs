@@ -28,38 +28,54 @@ namespace MyRNG
             // Variables - Standard
             //=============
             int Results = 0;
-            int RNGProcess;
-            int Max;
-            int Min;
+            int RNGProcess = 0;
+            bool UsableProcess = false;
 
             //=============
             // Setup Environment
             //=============
-            // Verify the parameters
-            if (MinValue < MaxValue)
-			{
-                Min = MinValue;
-                Max = MaxValue;
-            }
-            else
-            {
-                Min = MaxValue;
-                Max = MinValue;
-            }
+            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
 
-            // Chose the process to use
-            RNGProcess = Choose_Process();
+            // Choose the process to use
+            while (!UsableProcess)
+			{
+                // Choose a process
+                RNGProcess = Choose_Process();
+
+                // Assume the process can be used
+                UsableProcess = true;
+
+                // Validate if that process can be used based on the parameters
+                if (RNGProcess == (int)RNGTypes.Class_RNG_CSP)
+                {
+                    if (MinValue < 0)
+                    { UsableProcess = false; }
+
+                    if (MaxValue > 255)
+                    { UsableProcess = false; }
+                }
+            }
 
             //=============
             // Body
             //=============
+            //=============
+            // DEBUG => Ensure the selection I want
+            //=============
+            //RNGProcess = (int)RNGTypes.Class_Random;
+            //RNGProcess = (int)RNGTypes.Class_RNG_CSP;
+
             // Execute the chosen method
             switch (RNGProcess)
 			{
                 case (int)RNGTypes.Class_Random:
-                    Results = MS_Random(Min, Max);
+                    Results = MS_Random(MinValue, MaxValue);
                     break;
-			}
+
+                case (int)RNGTypes.Class_RNG_CSP:
+                    Results = MS_RNG_CSP(MinValue, MaxValue);
+                    break;
+            }
 
             //=============
             // Cleanup Environment
