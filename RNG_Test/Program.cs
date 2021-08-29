@@ -17,8 +17,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			int MinValue = -5;
-			int MaxValue = 5;
+			int MinValue = 0;
+			int MaxValue = 10;
 
 			//=============
 			// Body
@@ -46,7 +46,16 @@ namespace RNG_Test
 			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
 			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
 
+			// DEBUG => Generate a lot that are giving issues
+			//for (int i = 0; i < 100; i++)
+			//{
+			//	Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			//}
+
+			//=============
+			// Cleanup Environment
+			//=============
 			Console.ReadKey();
 		} // static void Main(string[] args)
-	}
-}
+	} // class Program
+} // namespace RNG_Test
