@@ -19,7 +19,7 @@ namespace MyRNG
         - A randomly generated selection for the process to use.
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This uses the Crypto Service Provider and therefore is limited to 255 selections.
+        - It is expected to have no more than 255 possible methods.
         ===============================================================================================
         */
         {

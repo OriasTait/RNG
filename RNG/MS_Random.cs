@@ -13,7 +13,7 @@ namespace MyRNG
 {
     public partial class RNG
     {
-        private int MS_Random(int MinValue, int MaxValue)
+        private long MS_Random(long MinValue, long MaxValue, DataTypes DType)
         /*
         ===============================================================================================
         PURPOSE:
@@ -23,30 +23,49 @@ namespace MyRNG
         PARAMETERS:
         - MinValue  => The minimum value to return
         - MaxValue  => The maximum value to return
+        - DType     => Data type being generated
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for Integers
+        - To ensure the next call is different from this one, after the number is generated the
+          process waits a random amount of time before returning the results.
         ===============================================================================================
         */
         {
             //=============
             // Variables - Standard
             //=============
+            long Results = 0;
             Random RandomNumber = new Random();
 
-            //=============
-            // Body
-            //=============
-            int Results = RandomNumber.Next(MinValue, MaxValue + 1);  // MaxValue is incremented to include it as a potential result
+			//=============
+			// Body
+			//=============
+			// Generate a byte
+			if (DType == DataTypes.Byte)
+			{
+				byte Min = (byte)MinValue;
+				byte Max = (byte)MaxValue;
 
-            //=============
-            // Cleanup Environment
-            //=============
-            // Wait a random bit of time to ensure a new seed
-            App.Sleep(RandomNumber.Next(1, 21));  // wait up to 20 miliseconds (1000 => 1 second)
+				Results = RandomNumber.Next(Min, Max + 1);  // MaxValue is incremented to include it as a potential result
+			}
+
+			// Generate an integer
+			if (DType == DataTypes.Integer)
+			{
+				int Min = (int)MinValue;
+				int Max = (int)MaxValue;
+
+				Results = RandomNumber.Next(Min, Max + 1);  // MaxValue is incremented to include it as a potential result
+			}
+
+			//=============
+			// Cleanup Environment
+			//=============
+			// Wait a random bit of time to ensure a new seed
+			App.Sleep(RandomNumber.Next(1, 21));  // wait up to 20 miliseconds (1000 => 1 second)
 
             // Return the results
             return Results;
-        } // private int MS_Random(int MinValue, int MaxValue)
+        } // private long MS_Random(long MinValue, long MaxValue, DataTypes DType)
     } // public class RNG
 }

@@ -24,33 +24,33 @@ namespace RNG_Test
 			// Body
 			//=============
 			// Pass the values in the incorrect order
-			Console.WriteLine("Pass the values in the incorrect order");
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+			//Console.WriteLine("Pass the values in the incorrect order");
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
 
 			// Pass the same value
-			Console.WriteLine("");
-			Console.WriteLine("Pass the same value:");
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+			//Console.WriteLine("");
+			//Console.WriteLine("Pass the same value:");
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
 
 			// Pass the values in the correct order
-			Console.WriteLine("");
-			Console.WriteLine("Pass the values in the correct order");
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			//Console.WriteLine("");
+			//Console.WriteLine("Pass the values in the correct order");
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			//Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
 
 			// DEBUG => Generate a lot that are giving issues
-			//for (int i = 0; i < 100; i++)
-			//{
-			//	Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			//}
+			for (int i = 0; i < 50; i++)
+			{
+				Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+				Console.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
+			}
 
 			//=============
 			// Cleanup Environment
