@@ -11,10 +11,24 @@ namespace MyRNG
         /*
         ===============================================================================================
         PURPOSE:
-        Enumerate the differrnt processes used in generating a random number.
+        Enumerate the different data types being generated.
+        ===============================================================================================
+        */
+        private enum DataTypes
+        {
+            Byte,
+            Integer
+        }
+
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Enumerate the different processes used in generating a random number.
         -----------------------------------------------------------------------------------------------
         NOTES:
         - The selection "END" is used to dynamically identify how many selections we have.
+        - It is assumed that the return value, MinValue and MaxValue of a generated number will all be
+          the same.
         ===============================================================================================
         */
         private enum RNGTypes 

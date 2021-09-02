@@ -8,6 +8,61 @@ namespace MyRNG
 {
     public partial class RNG
     {
+        public byte Generate(byte MinValue, byte MaxValue)
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Randomly generate a method to use in order to generate a random number from the given MinValue
+        up to (and including) the MaxValue.
+        -----------------------------------------------------------------------------------------------
+        PARAMETERS:
+        - MinValue  => The minimum value to return
+        - MaxValue  => The maximum value to return
+        -----------------------------------------------------------------------------------------------
+        NOTES:
+        - This method is for bytes
+        ===============================================================================================
+        */
+        {
+            //=============
+            // Variables - Standard
+            //=============
+            byte Results = 0;
+
+            //=============
+            // Setup Environment
+            //=============
+            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
+
+            //=============
+            // Body
+            //=============
+            // Choose a process
+            int RNGProcess = Choose_Process();
+
+            //=============
+            // DEBUG => Ensure the selection I want
+            //=============
+            //RNGProcess = (int)RNGTypes.Class_Random;
+            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
+
+            switch (RNGProcess)
+            {
+                case (int)RNGTypes.Class_Random:
+                    Results = (byte)MS_Random(MinValue, MaxValue, DataTypes.Byte);
+                    break;
+
+				case (int)RNGTypes.Class_RNG_CSP:
+					Results = MS_RNG_CSP(MinValue, MaxValue);
+					break;
+			}
+
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
+        } // public byte Generate(byte MinValue, byte MaxValue)
+
         public int Generate(int MinValue, int MaxValue)
         /*
         ===============================================================================================
@@ -28,54 +83,36 @@ namespace MyRNG
             // Variables - Standard
             //=============
             int Results = 0;
-            int RNGProcess = 0;
-            bool UsableProcess = false;
 
             //=============
             // Setup Environment
             //=============
             Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
 
-            // Choose the process to use
-            while (!UsableProcess)
-			{
-                // Choose a process
-                RNGProcess = Choose_Process();
-
-                // Assume the process can be used
-                UsableProcess = true;
-
-                // Validate if that process can be used based on the parameters
-                if (RNGProcess == (int)RNGTypes.Class_RNG_CSP)
-                {
-                    if (MinValue < 0)
-                    { UsableProcess = false; }
-
-                    if (MaxValue > 255)
-                    { UsableProcess = false; }
-                }
-            }
-
             //=============
             // Body
             //=============
+            // Choose a process
+            int RNGProcess = Choose_Process();
+
             //=============
             // DEBUG => Ensure the selection I want
             //=============
             //RNGProcess = (int)RNGTypes.Class_Random;
-            //RNGProcess = (int)RNGTypes.Class_RNG_CSP;
+            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
 
             // Execute the chosen method
             switch (RNGProcess)
 			{
                 case (int)RNGTypes.Class_Random:
-                    Results = MS_Random(MinValue, MaxValue);
+                    Results = (int)MS_Random(MinValue, MaxValue, DataTypes.Integer);
                     break;
 
-                case (int)RNGTypes.Class_RNG_CSP:
-                    Results = MS_RNG_CSP(MinValue, MaxValue);
-                    break;
-            }
+                    // How to standardize?
+				case (int)RNGTypes.Class_RNG_CSP:
+					Results = MS_RNG_CSP(MinValue, MaxValue);
+					break;
+			}
 
             //=============
             // Cleanup Environment
