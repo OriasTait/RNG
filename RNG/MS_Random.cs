@@ -28,6 +28,7 @@ namespace MyRNG
         NOTES:
         - To ensure the next call is different from this one, after the number is generated the
           process waits a random amount of time before returning the results.
+        - The .Next method is based on the data type used in the random generation.
         ===============================================================================================
         */
         {

@@ -34,7 +34,7 @@ namespace MyRNG
         private enum RNGTypes 
         {
             Class_Random,   // Microsoft Class Random
-//            Class_RNG_CSP,  // Microsoft RNGCryptoServiceProvider Class
+            Class_RNG_CSP,  // Microsoft RNGCryptoServiceProvider Class
             END             // End of the selections
         }
     } // public class RNG

@@ -40,16 +40,22 @@ namespace MyRNG
             // Choose a process
             int RNGProcess = Choose_Process();
 
+            //=============
+            // DEBUG => Ensure the selection I want
+            //=============
+            //RNGProcess = (int)RNGTypes.Class_Random;
+            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
+
             switch (RNGProcess)
             {
                 case (int)RNGTypes.Class_Random:
                     Results = (byte)MS_Random(MinValue, MaxValue, DataTypes.Byte);
                     break;
 
-                //case (int)RNGTypes.Class_RNG_CSP:
-                //    Results = MS_RNG_CSP(MinValue, MaxValue);
-                //    break;
-            }
+				case (int)RNGTypes.Class_RNG_CSP:
+					Results = MS_RNG_CSP(MinValue, MaxValue);
+					break;
+			}
 
             //=============
             // Cleanup Environment
@@ -93,7 +99,7 @@ namespace MyRNG
             // DEBUG => Ensure the selection I want
             //=============
             //RNGProcess = (int)RNGTypes.Class_Random;
-            //RNGProcess = (int)RNGTypes.Class_RNG_CSP;
+            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
 
             // Execute the chosen method
             switch (RNGProcess)
@@ -102,10 +108,11 @@ namespace MyRNG
                     Results = (int)MS_Random(MinValue, MaxValue, DataTypes.Integer);
                     break;
 
-                //case (int)RNGTypes.Class_RNG_CSP:
-                //    Results = MS_RNG_CSP(MinValue, MaxValue);
-                //    break;
-            }
+                    // How to standardize?
+				case (int)RNGTypes.Class_RNG_CSP:
+					Results = MS_RNG_CSP(MinValue, MaxValue);
+					break;
+			}
 
             //=============
             // Cleanup Environment

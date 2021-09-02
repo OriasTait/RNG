@@ -19,7 +19,7 @@ namespace MyRNG
         - A randomly generated selection for the process to use.
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - It is expected to have no more than 255 possible methods.
+        - It is expected to have no more than 2,147,483,647 possible methods.
         ===============================================================================================
         */
         {
@@ -31,23 +31,12 @@ namespace MyRNG
             //=============
             // Variables - Random Number Generation
             //=============
-            byte[] RandomNumber = new byte[1];  // Place to store the random number
-            int RNGCount = (int)RNGTypes.END;  // Obtain the count of different types to use
-            RNGCryptoServiceProvider RNGCSP = new RNGCryptoServiceProvider();
+            int RNGCount = (int)RNGTypes.END - 1;  // Obtain the maximum array value of possible methods
 
             //=============
             // Body
             //=============
-            // Fill the array with a random value.
-            do
-            {
-                // Fill the array with a random value.
-                RNGCSP.GetBytes(RandomNumber);
-
-                // Assign the results based on the random number
-                Results = (RandomNumber[0] % RNGCount);
-            }
-            while (!IsFair(RandomNumber[0], RNGCount));
+            Results = MS_RNG_CSP(0, RNGCount);
 
             //=============
             // Cleanup Environment
