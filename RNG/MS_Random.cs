@@ -59,11 +59,38 @@ namespace MyRNG
 				Results = RandomNumber.Next(Min, Max + 1);  // MaxValue is incremented to include it as a potential result
 			}
 
-			//=============
-			// Cleanup Environment
-			//=============
-			// Wait a random bit of time to ensure a new seed
-			App.Sleep(RandomNumber.Next(1, 21));  // wait up to 20 miliseconds (1000 => 1 second)
+            // Generate an long
+            if (DType == DataTypes.Long)
+			{
+                byte[] Buffer = new byte[8];  // Long data types => 8 bytes
+                long LongRand; // The long number that is randomly generated
+                long Offset = MinValue;  // Offset from 0
+                long Selections = (MaxValue - MinValue) + 1;  // The number of selections possible
+                bool ValidNumber = false;
+
+                do
+                {
+                    // Fill the array with a random value.
+                    RandomNumber.NextBytes(Buffer);
+
+                    // Convert to a long number
+                    LongRand = (long)BitConverter.ToInt64(Buffer, 0);
+
+                    // Assign the results based on the random number
+                    Results = (LongRand % Selections) + Offset;
+
+                    // Check if it is fair and within the range
+                    if ((IsFair(LongRand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
+                    { ValidNumber = true; }
+                }
+                while (!ValidNumber);
+            }
+
+            //=============
+            // Cleanup Environment
+            //=============
+            // Wait a random bit of time to ensure a new seed
+            App.Sleep(RandomNumber.Next(1, 21));  // wait up to 20 miliseconds (1000 => 1 second)
 
             // Return the results
             return Results;

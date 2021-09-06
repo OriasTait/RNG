@@ -17,7 +17,8 @@ namespace MyRNG
         private enum DataTypes
         {
             Byte,
-            Integer
+            Integer,
+            Long
         }
 
         /*

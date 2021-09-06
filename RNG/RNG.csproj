@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IsInRange.cs" />
     <Compile Include="IsFair.cs" />
     <Compile Include="MS_RNG_CSP.cs" />
     <Compile Include="MS_Random.cs" />

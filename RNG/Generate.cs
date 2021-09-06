@@ -40,12 +40,6 @@ namespace MyRNG
             // Choose a process
             int RNGProcess = Choose_Process();
 
-            //=============
-            // DEBUG => Ensure the selection I want
-            //=============
-            //RNGProcess = (int)RNGTypes.Class_Random;
-            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
-
             switch (RNGProcess)
             {
                 case (int)RNGTypes.Class_Random:
@@ -95,12 +89,6 @@ namespace MyRNG
             // Choose a process
             int RNGProcess = Choose_Process();
 
-            //=============
-            // DEBUG => Ensure the selection I want
-            //=============
-            //RNGProcess = (int)RNGTypes.Class_Random;
-            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
-
             // Execute the chosen method
             switch (RNGProcess)
 			{
@@ -113,6 +101,63 @@ namespace MyRNG
 					Results = MS_RNG_CSP(MinValue, MaxValue);
 					break;
 			}
+
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
+        } // public int Generate(int MinValue, int MaxValue)
+
+        public long Generate(long MinValue, long MaxValue)
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Randomly generate a method to use in order to generate a random number from the given MinValue
+        up to (and including) the MaxValue.
+        -----------------------------------------------------------------------------------------------
+        PARAMETERS:
+        - MinValue  => The minimum value to return
+        - MaxValue  => The maximum value to return
+        -----------------------------------------------------------------------------------------------
+        NOTES:
+        - This method is for Long
+        ===============================================================================================
+        */
+        {
+            //=============
+            // Variables - Standard
+            //=============
+            long Results = 0;
+
+            //=============
+            // Setup Environment
+            //=============
+            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
+
+            //=============
+            // Body
+            //=============
+            // Choose a process
+            int RNGProcess = Choose_Process();
+
+            //=============
+            // DEBUG => Ensure the selection I want
+            //=============
+            //int RNGProcess = (int)RNGTypes.Class_Random;
+            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
+
+            // Execute the chosen method
+            switch (RNGProcess)
+            {
+                case (int)RNGTypes.Class_Random:
+                    Results = (int)MS_Random(MinValue, MaxValue, DataTypes.Long);
+                    break;
+
+                // How to standardize?
+                case (int)RNGTypes.Class_RNG_CSP:
+                    Results = MS_RNG_CSP(MinValue, MaxValue);
+                    break;
+            }
 
             //=============
             // Cleanup Environment

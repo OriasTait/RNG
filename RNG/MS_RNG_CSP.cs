@@ -100,6 +100,7 @@ namespace MyRNG
             // Variables - Standard
             //=============
             long Results;
+            bool ValidNumber = false;
 
             //=============
             // Setup Environment
@@ -109,24 +110,31 @@ namespace MyRNG
             //=============
             // Variables - Random Number Generation
             //=============
+            long LongRand; // The long number that is randomly generated
             long Offset = MinValue;  // Offset from 0
             byte[] RandomNumber = new byte[8];  // Long data types => 8 bytes
             RNGCryptoServiceProvider RNGCSP = new RNGCryptoServiceProvider();
             long Selections = (MaxValue - MinValue) + 1;  // The number of selections possible
 
-			//=============
-			// Body
-			//=============
-			// Fill the array with a random value.
-			do
-			{
+            //=============
+            // Body
+            //=============
+            do
+            {
 				// Fill the array with a random value.
 				RNGCSP.GetBytes(RandomNumber);
 
-				// Assign the results based on the random number
-				Results = (RandomNumber[0] % Selections) + Offset;
+                // Convert to a long number
+                LongRand = (long)BitConverter.ToInt64(RandomNumber, 0);
+
+                // Assign the results based on the random number
+                Results = (LongRand % Selections) + Offset;
+
+                // Check if it is fair and within the range
+                if((IsFair(LongRand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
+                { ValidNumber = true; }
 			}
-			while (!IsFair(RandomNumber[0], Selections));
+			while (!ValidNumber);
 
 			//=============
 			// Cleanup Environment
@@ -134,4 +142,4 @@ namespace MyRNG
 			return Results;
         } // private long MS_RNG_CSP(long MinValue, long MaxValue)
     } // public class RNG
-}
+} // namespace MyRNG
