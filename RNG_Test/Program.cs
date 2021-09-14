@@ -5,8 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using MyRNG;
 
-using System.Security.Cryptography;
-
 namespace RNG_Test
 {
 	class Program
@@ -30,15 +28,13 @@ namespace RNG_Test
 			Console.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
 
 			// Pass the same value
-			Console.WriteLine("");
-			Console.WriteLine("Pass the same value:");
+			Console.WriteLine("\nPass the same value:");
 			Console.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
 			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
 			Console.WriteLine("{0}", MyRandomNumber.Generate((long)MaxValue, (long)MaxValue));
 
 			// Pass the values in the correct order
-			Console.WriteLine("");
-			Console.WriteLine("Pass the values in the correct order");
+			Console.WriteLine("\nPass the values in the correct order");
 			Console.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
 			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
 			Console.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
@@ -53,8 +49,7 @@ namespace RNG_Test
 			//=============
 			// Cleanup Environment
 			//=============
-			Console.WriteLine("");
-			Console.WriteLine("Press any key to continue...");
+			Console.WriteLine("\nPress any key to continue...");
 			Console.ReadKey();
 		} // static void Main(string[] args)
 	} // class Program

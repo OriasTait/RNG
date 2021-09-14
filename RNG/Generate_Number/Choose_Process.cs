@@ -31,12 +31,14 @@ namespace MyRNG
             //=============
             // Variables - Random Number Generation
             //=============
-            int RNGCount = (int)RNGTypes.END - 1;  // Obtain the maximum array value of possible methods
+            // Obtain the maximum Enumeration value of all possible methods
+            int RNGCount = (int)RNGTypes.END - 1;
 
             //=============
             // Body
             //=============
-            Results = MS_RNG_CSP(0, RNGCount);
+            // Use the MS_RNG_CSP method to randomly choose the method to use
+            Results = int.Parse(MS_RNG_CSP(0, RNGCount).ToString());
 
             //=============
             // Cleanup Environment

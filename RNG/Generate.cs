@@ -25,31 +25,13 @@ namespace MyRNG
         */
         {
             //=============
-            // Variables - Standard
-            //=============
-            byte Results = 0;
-
-            //=============
-            // Setup Environment
-            //=============
-            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
-
-            //=============
             // Body
             //=============
-            // Choose a process
-            int RNGProcess = Choose_Process();
+            // Generate the number
+            long GeneratedNumber = Generate_Number(MinValue, MaxValue);
 
-            switch (RNGProcess)
-            {
-                case (int)RNGTypes.Class_Random:
-                    Results = (byte)MS_Random(MinValue, MaxValue, DataTypes.Byte);
-                    break;
-
-				case (int)RNGTypes.Class_RNG_CSP:
-					Results = MS_RNG_CSP(MinValue, MaxValue);
-					break;
-			}
+            // Convert the number back to a Byte
+            byte Results = Byte.Parse(GeneratedNumber.ToString());
 
             //=============
             // Cleanup Environment
@@ -74,33 +56,13 @@ namespace MyRNG
         */
         {
             //=============
-            // Variables - Standard
-            //=============
-            int Results = 0;
-
-            //=============
-            // Setup Environment
-            //=============
-            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
-
-            //=============
             // Body
             //=============
-            // Choose a process
-            int RNGProcess = Choose_Process();
+            // Generate the number
+            long GeneratedNumber = Generate_Number(MinValue, MaxValue);
 
-            // Execute the chosen method
-            switch (RNGProcess)
-			{
-                case (int)RNGTypes.Class_Random:
-                    Results = (int)MS_Random(MinValue, MaxValue, DataTypes.Integer);
-                    break;
-
-                    // How to standardize?
-				case (int)RNGTypes.Class_RNG_CSP:
-					Results = MS_RNG_CSP(MinValue, MaxValue);
-					break;
-			}
+            // Convert the number back to a Integer
+            int Results = int.Parse(GeneratedNumber.ToString());
 
             //=============
             // Cleanup Environment
@@ -125,39 +87,13 @@ namespace MyRNG
         */
         {
             //=============
-            // Variables - Standard
-            //=============
-            long Results = 0;
-
-            //=============
-            // Setup Environment
-            //=============
-            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
-
-            //=============
             // Body
             //=============
-            // Choose a process
-            int RNGProcess = Choose_Process();
+            // Generate the number
+            long GeneratedNumber = Generate_Number(MinValue, MaxValue);
 
-            //=============
-            // DEBUG => Ensure the selection I want
-            //=============
-            //int RNGProcess = (int)RNGTypes.Class_Random;
-            //int RNGProcess = (int)RNGTypes.Class_RNG_CSP;
-
-            // Execute the chosen method
-            switch (RNGProcess)
-            {
-                case (int)RNGTypes.Class_Random:
-                    Results = (int)MS_Random(MinValue, MaxValue, DataTypes.Long);
-                    break;
-
-                // How to standardize?
-                case (int)RNGTypes.Class_RNG_CSP:
-                    Results = MS_RNG_CSP(MinValue, MaxValue);
-                    break;
-            }
+            // Convert the number back to a Integer
+            long Results = int.Parse(GeneratedNumber.ToString());
 
             //=============
             // Cleanup Environment
@@ -165,4 +101,4 @@ namespace MyRNG
             return Results;
         } // public int Generate(int MinValue, int MaxValue)
     } // public class RNG
-}
+} // namespace MyRNG

@@ -41,11 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Generate_Number\Generate_Number.cs" />
     <Compile Include="IsInRange.cs" />
     <Compile Include="IsFair.cs" />
-    <Compile Include="MS_RNG_CSP.cs" />
-    <Compile Include="MS_Random.cs" />
-    <Compile Include="Choose_Process.cs" />
+    <Compile Include="MS_RNG_CSP\MS_RNG_CSP.cs" />
+    <Compile Include="MS_Random\MS_Random.cs" />
+    <Compile Include="Generate_Number\Choose_Process.cs" />
     <Compile Include="Generate.cs" />
     <Compile Include="Verify_MaxMin_Parameters.cs" />
     <Compile Include="RNG.cs" />
