@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
 	public partial class RNG
 	{
@@ -26,4 +26,4 @@ namespace MyRNG
             END             // End of the selections
         }
     } // public class RNG
-}
+} // Orias_RNG

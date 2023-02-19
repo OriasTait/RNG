@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -54,4 +54,4 @@ namespace MyRNG
             return Results;
         } // private static bool IsFair(byte Number, int Selections)
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

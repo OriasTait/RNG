@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
 	public partial class RNG
 	{
@@ -55,4 +55,4 @@ namespace MyRNG
             MaxValue = Max;
         } // private void Verify_MaxMin_Parameters(ref int MinValue, ref int MaxValue)
     } // public class RNG
-}
+} // namespace MyRNG

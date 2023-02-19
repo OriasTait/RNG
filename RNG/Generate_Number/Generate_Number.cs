@@ -5,7 +5,7 @@ using System.Security.Cryptography;  // for RNGCryptoServiceProvider
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -35,6 +35,7 @@ namespace MyRNG
             //=============
             // Setup Environment
             //=============
+            
             Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
 
 			//=============
@@ -61,4 +62,4 @@ namespace MyRNG
 			return Results;
         } // private int Generate_Number()
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

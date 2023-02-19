@@ -5,7 +5,7 @@ using System.Security.Cryptography;  // for RNGCryptoServiceProvider
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -46,4 +46,4 @@ namespace MyRNG
             return Results;
         } // private int Choose_Process()
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

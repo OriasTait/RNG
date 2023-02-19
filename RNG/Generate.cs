@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -101,4 +101,4 @@ namespace MyRNG
             return Results;
         } // public int Generate(int MinValue, int MaxValue)
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

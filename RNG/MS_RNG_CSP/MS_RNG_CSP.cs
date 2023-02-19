@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 //=============
 using App = System.Threading.Thread;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -81,4 +81,4 @@ namespace MyRNG
 			return Results;
         } // private long MS_RNG_CSP(long MinValue, long MaxValue)
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

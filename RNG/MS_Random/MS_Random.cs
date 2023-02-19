@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //=============
 using App = System.Threading.Thread;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -57,14 +57,14 @@ namespace MyRNG
             //=============
             // Body
             //=============
-            // Generate an long
+            // Generate a long
             do
             {
                 // Fill the array with a random value.
                 RandomNumber.NextBytes(Buffer);
 
                 // Convert to a long number
-                LongRand = (long)BitConverter.ToInt64(Buffer, 0);
+                LongRand = BitConverter.ToInt64(Buffer, 0);
 
                 // Assign the results based on the random number
                 Results = (LongRand % Selections) + Offset;
@@ -89,4 +89,4 @@ namespace MyRNG
             return Results;
         } // private long MS_Random(long MinValue, long MaxValue)
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG
