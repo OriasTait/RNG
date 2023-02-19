@@ -33,3 +33,8 @@ cryptographic service provider (CSP).
 - The random generator only generates bytes, so the different data types need to be built to accomidate how the data is stored.  For example,
   to generate a random integer, an array of 4 bytes need to be used instead of 1.
 - Additional functionality needs to be created to handle a fairly generated number.
+
+=============
+
+# How to compile
+This was created in Microsoft Visual Studio Community 2019.  Open the file SQLiteAPI.sln in Visual Studio and compile the project.

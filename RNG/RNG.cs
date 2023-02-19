@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace MyRNG
 {
-    public partial class RNG
-    {
+	public partial class RNG
+	{
         /*
         ===============================================================================================
         PURPOSE:

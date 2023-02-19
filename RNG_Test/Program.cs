@@ -5,9 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using MyRNG;
 
+//=============
+// Aliases
+//=============
+using Con = System.Console;
+
 namespace RNG_Test
 {
-	class Program
+	internal static class Program
 	{
 		static void Main(/*string[] args*/)
 		{
@@ -22,35 +27,38 @@ namespace RNG_Test
 			// Body
 			//=============
 			// Pass the values in the incorrect order
-			Console.WriteLine("Pass the values in the incorrect order");
-			Console.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
+			Con.WriteLine("Pass the values in the incorrect order");
+			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
+#pragma warning disable S2234 // Parameters should be passed in the correct order
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+#pragma warning restore S2234 // Parameters should be passed in the correct order
+			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
 
 			// Pass the same value
-			Console.WriteLine("\nPass the same value:");
-			Console.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate((long)MaxValue, (long)MaxValue));
+			Con.WriteLine("\nPass the same value:");
+			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MaxValue, (long)MaxValue));
 
 			// Pass the values in the correct order
-			Console.WriteLine("\nPass the values in the correct order");
-			Console.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			Console.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
+			Con.WriteLine("\nPass the values in the correct order");
+			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
 
 			// DEBUG => Generate a lot that are giving issues
-			//for (int i = 0; i < 50; i++)
-			//{
-			//	//Console.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			//	Console.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (byte)MaxValue));
-			//}
+			Con.WriteLine("\nInteger and Long Random Numbers 50 times");
+			for (int i = 0; i < 50; i++)
+			{
+				Con.Write("Int: {0}", MyRandomNumber.Generate(MinValue, MaxValue).ToString() + " ");
+				Con.WriteLine("Long: {0}", MyRandomNumber.Generate((long)MinValue, (byte)MaxValue));
+			}
 
 			//=============
 			// Cleanup Environment
 			//=============
-			Console.WriteLine("\nPress any key to continue...");
-			Console.ReadKey();
+			Con.WriteLine("\nPress any key to continue...");
+			Con.ReadKey();
 		} // static void Main(string[] args)
 	} // class Program
 } // namespace RNG_Test
