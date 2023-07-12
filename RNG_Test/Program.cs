@@ -47,8 +47,8 @@ namespace RNG_Test
 			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
 
 			// DEBUG => Generate a lot that are giving issues
-			Con.WriteLine("\nInteger and Long Random Numbers 50 times");
-			for (int i = 0; i < 50; i++)
+			Con.WriteLine("\nInteger and Long Random Numbers 20 times");
+			for (int i = 0; i < 20; i++)
 			{
 				Con.Write("Int: {0}", MyRandomNumber.Generate(MinValue, MaxValue).ToString() + " ");
 				Con.WriteLine("Long: {0}", MyRandomNumber.Generate((long)MinValue, (byte)MaxValue));

@@ -37,8 +37,8 @@ namespace Orias_RNG
             //=============
             // Body
             //=============
-            // Use the MS_RNG_CSP method to randomly choose the method to use
-            Results = int.Parse(MS_RNG_CSP(0, RNGCount).ToString());
+            // Use the MS_RNG_RNG method to randomly choose the method to use
+            Results = int.Parse(MS_RNG_RNG(0, RNGCount).ToString());
 
             //=============
             // Cleanup Environment

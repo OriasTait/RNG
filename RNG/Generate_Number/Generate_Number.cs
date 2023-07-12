@@ -45,7 +45,7 @@ namespace Orias_RNG
 			int RNGProcess = Choose_Process();
 
             // Use the chosen method
-			switch (RNGProcess)
+            switch (RNGProcess)
 			{
 				case (int)RNGTypes.Class_Random:
 					Results = MS_Random(MinValue, MaxValue);
@@ -54,12 +54,16 @@ namespace Orias_RNG
 				case (int)RNGTypes.Class_RNG_CSP:
 					Results = MS_RNG_CSP(MinValue, MaxValue);
 					break;
-			}
 
-			//=============
-			// Cleanup Environment
-			//=============
-			return Results;
+                case (int)RNGTypes.Class_RNG_RNG:
+                    Results = MS_RNG_RNG(MinValue, MaxValue);
+                    break;
+            }
+
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
         } // private int Generate_Number()
     } // public class RNG
 } // namespace Orias_RNG
