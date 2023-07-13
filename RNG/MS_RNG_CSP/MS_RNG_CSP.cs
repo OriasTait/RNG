@@ -30,7 +30,7 @@ namespace Orias_RNG
             //=============
             // Variables - Standard
             //=============
-            bool Positive = false;      // Is the Min and Max values both positive?
+            //bool Positive = false;      // Is the Min and Max values both positive?
             long Results;               // The results to return
             bool ValidNumber = false;   // Flag to indicate if the results are valid.
 

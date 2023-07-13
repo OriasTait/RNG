@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Orias_RNG
 {
-    public partial class RNG
+	public partial class RNG
     {
         public byte Generate(byte MinValue, byte MaxValue)
         /*

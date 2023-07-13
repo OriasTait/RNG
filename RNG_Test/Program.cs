@@ -20,39 +20,59 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			int MinValue = 0;
+			int MinValue = 1;
 			int MaxValue = 10;
 
 			//=============
 			// Body
 			//=============
-			// Pass the values in the incorrect order
-			Con.WriteLine("Pass the values in the incorrect order");
-			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
-#pragma warning disable S2234 // Parameters should be passed in the correct order
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
-#pragma warning restore S2234 // Parameters should be passed in the correct order
-			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
+			// Test the Byte
+			Con.WriteLine("Byte => Pass the values in the incorrect order");
+			//Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
+
+			// Pass Negative values
+			Con.WriteLine("\nByte => Pass negative values");
 
 			// Pass the same value
-			Con.WriteLine("\nPass the same value:");
-			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
-			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MaxValue, (long)MaxValue));
+			Con.WriteLine("\nByte => Pass the same value");
+			//Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
+
+			// Pass values outside the range
+			Con.WriteLine("\nByte => Pass values outside the range");
+
+			// Pass the values in the correct order
+			Con.WriteLine("\nByte => Pass the values in the correct order");
+			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
+
+			// Do a loop
+			Con.WriteLine("\nByte => Loop 10 times");
+
+			//=============
+			//=============
+			// Pass the values in the incorrect order
+			//Con.WriteLine("Pass the values in the incorrect order");
+			//#pragma warning disable S2234 // Parameters should be passed in the correct order
+			//			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+			//#pragma warning restore S2234 // Parameters should be passed in the correct order
+			//			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
+
+			// Pass the same value
+			//Con.WriteLine("\nPass the same value:");
+			//Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+			//Con.WriteLine("{0}", MyRandomNumber.Generate((long)MaxValue, (long)MaxValue));
 
 			// Pass the values in the correct order
 			Con.WriteLine("\nPass the values in the correct order");
-			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-			Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
+			//Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			//Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
 
 			// DEBUG => Generate a lot that are giving issues
-			Con.WriteLine("\nInteger and Long Random Numbers 20 times");
-			for (int i = 0; i < 20; i++)
-			{
-				Con.Write("Int: {0}", MyRandomNumber.Generate(MinValue, MaxValue).ToString() + " ");
-				Con.WriteLine("Long: {0}", MyRandomNumber.Generate((long)MinValue, (byte)MaxValue));
-			}
+			//Con.WriteLine("\nInteger and Long Random Numbers 20 times");
+			//for (int i = 0; i < 20; i++)
+			//{
+			//	Con.Write("Int: {0}", MyRandomNumber.Generate(MinValue, MaxValue).ToString() + " ");
+			//	Con.WriteLine("Long: {0}", MyRandomNumber.Generate((long)MinValue, (byte)MaxValue));
+			//}
 
 			//=============
 			// Cleanup Environment

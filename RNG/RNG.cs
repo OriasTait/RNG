@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Orias_RNG
 {
-	public partial class RNG
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
+    public partial class RNG
 	{
         /*
         ===============================================================================================
@@ -19,12 +20,20 @@ namespace Orias_RNG
           the same type.
         ===============================================================================================
         */
+        //=============
+        // Enumerations
+        //=============
         private enum RNGTypes 
         {
             Class_Random,   // Microsoft Class Random
             Class_RNG_CSP,  // Microsoft RNGCryptoServiceProvider Class
-            Class_RNG_RNG,  // Microsoft RandomNumberGenerator Class
+            //Class_RNG_RNG,  // Microsoft RandomNumberGenerator Class
             END             // End of the selections
         }
+
+        //=============
+        // Private Fields
+        //=============
+        private bool Positive = false;
     } // public class RNG
 } // Orias_RNG
