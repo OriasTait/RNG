@@ -55,10 +55,10 @@ namespace Orias_RNG
 					Results = MS_RNG_CSP(MinValue, MaxValue);
 					break;
 
-                //case (int)RNGTypes.Class_RNG_RNG:
-                //    Results = MS_RNG_RNG(MinValue, MaxValue);
-                //    break;
-            }
+				case (int)RNGTypes.Class_RNG_RNG:
+					Results = MS_RNG_RNG(MinValue, MaxValue);
+					break;
+			}
 
             //=============
             // Cleanup Environment

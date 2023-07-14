@@ -19,33 +19,16 @@ namespace RNG_Test
 			//=============
 			// Variables - Standard
 			//=============
-			RNG MyRandomNumber = new RNG();
-			int MinValue = 1;
-			int MaxValue = 10;
+			//RNG MyRandomNumber = new RNG();
+			//int MinValue = 1;
+			//int MaxValue = 10;
 
 			//=============
 			// Body
 			//=============
-			// Test the Byte
-			Con.WriteLine("Byte => Pass the values in the incorrect order");
-			//Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
-
-			// Pass Negative values
-			Con.WriteLine("\nByte => Pass negative values");
-
-			// Pass the same value
-			Con.WriteLine("\nByte => Pass the same value");
-			//Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
-
-			// Pass values outside the range
-			Con.WriteLine("\nByte => Pass values outside the range");
-
-			// Pass the values in the correct order
-			Con.WriteLine("\nByte => Pass the values in the correct order");
-			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MinValue, (byte)MaxValue));
-
-			// Do a loop
-			Con.WriteLine("\nByte => Loop 10 times");
+			// Menu
+			Menus Main_Menu = new Menus();
+			Main_Menu.Main_Menu();
 
 			//=============
 			//=============
@@ -62,7 +45,7 @@ namespace RNG_Test
 			//Con.WriteLine("{0}", MyRandomNumber.Generate((long)MaxValue, (long)MaxValue));
 
 			// Pass the values in the correct order
-			Con.WriteLine("\nPass the values in the correct order");
+			//Con.WriteLine("\nPass the values in the correct order");
 			//Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
 			//Con.WriteLine("{0}", MyRandomNumber.Generate((long)MinValue, (long)MaxValue));
 
@@ -77,8 +60,8 @@ namespace RNG_Test
 			//=============
 			// Cleanup Environment
 			//=============
-			Con.WriteLine("\nPress any key to continue...");
-			Con.ReadKey();
-		} // static void Main(string[] args)
+			//Con.WriteLine("\nPress any key to continue...");
+			//Con.ReadKey();
+		} // static void Main
 	} // class Program
 } // namespace RNG_Test

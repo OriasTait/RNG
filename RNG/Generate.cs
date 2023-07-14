@@ -20,7 +20,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for bytes
+        - This method is for an Unsigned 8-bit integer; range 0 to 255
         ===============================================================================================
         */
         {
