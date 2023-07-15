@@ -48,8 +48,6 @@ namespace Orias_RNG
             //=============
             // Setup Environment
             //=============
-            //bool Positive = false;  // Is the Min and Max values both positive?
-
             // Check if all values are expected to be positive
             if (MinValue >= 0) { Positive = true; }
 

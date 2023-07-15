@@ -22,9 +22,6 @@ namespace RNG_Test
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Presentation of the chosen option.
-		-----------------------------------------------------------------------------------------------
-		NOTES:
-		- Note 1
 		===============================================================================================
 		*/
 		{
@@ -44,7 +41,8 @@ namespace RNG_Test
 				Con.Clear();
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  1 => Unsigned 8-bit integer");
+				Con.WriteLine(@"  1 => Signed 8-bit integer");
+				Con.WriteLine(@"  2 => Unsigned 8-bit integer");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");
@@ -54,8 +52,13 @@ namespace RNG_Test
 				// Check the key that was pressed
 				switch (Key_Pressed)
 				{
-					// BYTES
+					// Signed BYTE
 					case '1':
+						BYTE_Test.Signed_BYTE();
+						break;
+
+					// Unsigned BYTE
+					case '2':
 						BYTE_Test.Unsigned_BYTE();
 						break;
 

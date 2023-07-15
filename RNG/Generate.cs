@@ -28,7 +28,7 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            long GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            GeneratedNumber = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Byte
             byte Results = Byte.Parse(GeneratedNumber.ToString());
@@ -59,7 +59,7 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            long GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            GeneratedNumber = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Integer
             int Results = int.Parse(GeneratedNumber.ToString());
@@ -90,7 +90,7 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            long GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            GeneratedNumber = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Integer
             long Results = int.Parse(GeneratedNumber.ToString());
