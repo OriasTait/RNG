@@ -34,8 +34,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			byte MinValue = 0;
-			byte MaxValue = 255;
+			byte MinValue = byte.MinValue;
+			byte MaxValue = byte.MaxValue;
 
 			//=============
 			// Setup Environment
@@ -45,24 +45,63 @@ namespace RNG_Test
 			//=============
 			// Body
 			//=============
+			Con.WriteLine(@"Testing of an Unsigned 8-bit integer");
 
 			//=============
 			// Test the Byte
 			//=============
-			Con.WriteLine("Byte => Pass the values in the incorrect order (MaxValue, MinValue)");
+			Con.WriteLine();
+			Con.WriteLine(@"Pass the values in the incorrect order (MaxValue, MinValue)");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
 			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
 
+			//=============
 			// Pass Negative values
+			// => Passing a negative value to a BYTE causes it to cycle to maxvalue. For example
+			//    -1 becomes 255.
+			//=============
 			//Con.WriteLine("\nByte => Pass negative values");
 
+			//=============
 			// Pass the same value
-			//Con.WriteLine("\nByte => Pass the same value");
-			//Con.WriteLine("{0}", MyRandomNumber.Generate((byte)MaxValue, (byte)MaxValue));
+			//=============
+			Con.WriteLine();
+			Con.WriteLine(@"Pass the same value");
+			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MinValue) + "\t");
+			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MaxValue) + "\t");
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
 
+			//=============
 			// Pass values outside the range
-			//Con.WriteLine("\nByte => Pass values outside the range");
+			// => This automatically converts the call to an int.  Since this call is overloaded with the differnt
+			//    types, the call to generate MUST validate the values before calling.
+			//=============
+			Con.WriteLine();
+			Con.WriteLine(@"Pass values outside the range");
+
+			int Bad_MinValue = byte.MinValue - 1;
+			int Bad_MaxValue = byte.MaxValue + 1;
+			bool IsValid = true;  // Assume the value is valid
+
+			if(Bad_MinValue < byte.MinValue)
+			{
+				Con.WriteLine(@"Intended value ({0}) cannot be converted to BYTE.", Bad_MinValue);
+				IsValid = false;
+			}
+
+			if (Bad_MaxValue > byte.MaxValue)
+			{
+				Con.WriteLine(@"Intended value ({0}) cannot be converted to BYTE.", Bad_MaxValue);
+				IsValid = false;
+			}
+
+			if (IsValid)
+			{
+				Con.Write("{0}", MyRandomNumber.Generate(Bad_MinValue, MaxValue) + "\t");
+				Con.Write("{0}", MyRandomNumber.Generate(MinValue, Bad_MaxValue) + "\t");
+				Con.WriteLine("{0}", MyRandomNumber.Generate(Bad_MinValue, Bad_MaxValue));
+			}
 
 			//=============
 			// Pass the values in the correct order
