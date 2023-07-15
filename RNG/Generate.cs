@@ -39,6 +39,37 @@ namespace Orias_RNG
             return Results;
         } // public byte Generate(byte MinValue, byte MaxValue)
 
+        public sbyte Generate(sbyte MinValue, sbyte MaxValue)
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Randomly generate a method to use in order to generate a random number from the given MinValue
+        up to (and including) the MaxValue.
+        -----------------------------------------------------------------------------------------------
+        PARAMETERS:
+        - MinValue  => The minimum value to return
+        - MaxValue  => The maximum value to return
+        -----------------------------------------------------------------------------------------------
+        NOTES:
+        - This method is for an Unsigned 8-bit integer; range -128 to 127
+        ===============================================================================================
+        */
+        {
+            //=============
+            // Body
+            //=============
+            // Generate the number
+            GeneratedNumber = Generate_Number(MinValue, MaxValue);
+
+            // Convert the number back to a Byte
+            sbyte Results = SByte.Parse(GeneratedNumber.ToString());
+
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
+        } // public sbyte Generate(byte MinValue, byte MaxValue)
+
         public int Generate(int MinValue, int MaxValue)
         /*
         ===============================================================================================

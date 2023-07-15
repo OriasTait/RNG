@@ -14,12 +14,12 @@ namespace RNG_Test
 {
 	partial class BYTE_Testing
 	{
-		private void Unsigned_BYTE_Negative_Values()
+		private void Signed_BYTE_Negative_Values()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for an Unsigned BYTE when the parameters that are provided
-		are negative.
+		Test the Random Number Generator for a Signed BYTE when the parameters that are provided are
+		negative.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		An error message if the values are outside the range; otherwise a randomly generated Unsigned
@@ -76,6 +76,6 @@ namespace RNG_Test
 				Con.Write("{0}", MyRandomNumber.Generate(MinValue, Bad_MaxValue) + "\t");
 				Con.WriteLine("{0}", MyRandomNumber.Generate(Bad_MinValue, Bad_MaxValue));
 			}
-		} // private void Unsigned_BYTE_Negative_Values
+		} // private void Signed_BYTE_Negative_Values
 	} // partial class BYTE_Testing
 } // namespace RNG_Test

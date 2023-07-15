@@ -17,13 +17,13 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Loop through the tests for a signed BYTE data type.
+		Loop through the tests for a Signed BYTE data type.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Presentation of the chosen option.
 		-----------------------------------------------------------------------------------------------
 		NOTES:
-		- This tests the generation of an Unsigned 8-bit integer.
+		- This tests the generation of an Signed 8-bit integer.
 
 		- The range of possible values is -128 to 127
 		===============================================================================================
@@ -42,32 +42,32 @@ namespace RNG_Test
 			//=============
 			// Pass values in the incorrect order
 			//=============
-			//Unsigned_BYTE_Incorect_Order();
+			Signed_BYTE_Incorect_Order();
 
 			//=============
 			// Pass Negative values
 			//=============
-			//Unsigned_BYTE_Negative_Values();
+			Signed_BYTE_Negative_Values();
 
 			//=============
 			// Pass the same value
 			//=============
-			//Unsigned_BYTE_Same_Value();
+			Signed_BYTE_Same_Value();
 
 			//=============
 			// Pass values outside the range
 			//=============
-			//Unsigned_BYTE_Values_Outside_Range();
+			Signed_BYTE_Values_Outside_Range();
 
 			//=============
 			// Pass the values in the correct order
 			//=============
-			//Unsigned_BYTE_Correct_Order();
+			Signed_BYTE_Correct_Order();
 
 			//=============
 			// Do a loop
 			//=============
-			//Unsigned_BYTE_Loop();
+			Signed_BYTE_Loop();
 
 			//=============
 			// Cleanup Environment

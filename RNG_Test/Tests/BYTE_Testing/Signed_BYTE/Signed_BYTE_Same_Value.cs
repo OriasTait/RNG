@@ -14,7 +14,7 @@ namespace RNG_Test
 {
 	partial class BYTE_Testing
 	{
-		private void Unsigned_BYTE_Same_Value()
+		private void Signed_BYTE_Same_Value()
 		/*
 		===============================================================================================
 		PURPOSE:
@@ -30,8 +30,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			byte MinValue = byte.MinValue;
-			byte MaxValue = byte.MaxValue;
+			sbyte MinValue = sbyte.MinValue;
+			sbyte MaxValue = sbyte.MaxValue;
 
 			//=============
 			// Body
@@ -41,6 +41,6 @@ namespace RNG_Test
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MinValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MaxValue) + "\t");
 			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)100, (byte)100));
-		} // private void Unsigned_BYTE_Same_Value
+		} // private void Signed_BYTE_Same_Value
 	} // partial class BYTE_Testing
 } // namespace RNG_Test

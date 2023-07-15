@@ -35,14 +35,16 @@ namespace Orias_RNG
             //=============
             // Setup Environment
             //=============
-            
             Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
+            
+            // Check if all values are expected to be positive
+            Positive_Only = (MinValue >= 0);
 
-			//=============
-			// Body
-			//=============
-			// Choose a process
-			int RNGProcess = Choose_Process();
+            //=============
+            // Body
+            //=============
+            // Choose a process
+            int RNGProcess = Choose_Process();
 
             // Use the chosen method
             switch (RNGProcess)

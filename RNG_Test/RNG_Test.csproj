@@ -47,7 +47,13 @@
     <Compile Include="Menus\Main_Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\BYTE_Testing\Signed_BYTE.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Correct_Order.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Incorrect_Order.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Loop.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Same_Value.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Values_Outside_Range.cs" />
+    <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Negative_Values.cs" />
     <Compile Include="Tests\BYTE_Testing\Unsigned_BYTE\Unsigned_BYTE_Loop.cs" />
     <Compile Include="Tests\BYTE_Testing\Unsigned_BYTE\Unsigned_BYTE_Negative_Values.cs" />
     <Compile Include="Tests\BYTE_Testing\Unsigned_BYTE\Unsigned_BYTE_Values_Outside_Range.cs" />
@@ -61,6 +67,7 @@
       <Link>.editorconfig</Link>
     </None>
     <None Include="App.config" />
+    <None Include="ChangeLog.md" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -69,8 +76,6 @@
       <Name>RNG</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\BYTE_Testing\Signed_BYTE\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

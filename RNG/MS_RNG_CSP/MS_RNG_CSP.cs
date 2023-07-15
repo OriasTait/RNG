@@ -37,17 +37,11 @@ namespace Orias_RNG
             //=============
             // Variables - Random Number Generation
             //=============
-            long LongRand;                                  // The long number that is randomly generated
+            //long LongRand;                                  // The long number that is randomly generated
             long Offset = MinValue;                         // Offset from 0
             byte[] RandomNumber = new byte[8];              // Long data types => 8 bytes
             RNGCryptoServiceProvider RNGCSP = new RNGCryptoServiceProvider();
             long Selections = (MaxValue - MinValue) + 1;    // The number of selections possible
-
-            //=============
-            // Setup Environment
-            //=============
-            // Check if all values are expected to be positive
-            if (MinValue >= 0) { Positive = true; }
 
             //=============
             // Body
@@ -67,7 +61,7 @@ namespace Orias_RNG
                 if ((IsFair(LongRand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
                 {
                     // If all values are expected to be positive, take the absolute value of the generated number
-                    if (Positive) { Results = Math.Abs(Results); }
+                    if (Positive_Only) { Results = Math.Abs(Results); }
 
                     // Set the flag for valid number to true
                     ValidNumber = true;

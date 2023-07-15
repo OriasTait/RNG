@@ -34,7 +34,8 @@ namespace Orias_RNG
         //=============
         // Private Fields
         //=============
-        private long GeneratedNumber;   // The results of the Random Number Generation
-        private bool Positive = false;  // Flag indicating the results contain only positive values
+        private long GeneratedNumber;       // The results of the Random Number Generation
+        private long LongRand;              // The long number that is randomly generated
+        private bool Positive_Only = false; // Flag indicating the results contain only positive values
     } // public class RNG
 } // Orias_RNG

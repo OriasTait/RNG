@@ -40,16 +40,9 @@ namespace Orias_RNG
             // Variables - Random Number Generation
             //=============
             byte[] Buffer = new byte[8];                    // Long data types => 8 bytes
-            long LongRand;                                  // The long number that is randomly generated
             long Offset = MinValue;                         // Offset from 0
             long Selections = (MaxValue - MinValue) + 1;    // The number of selections possible
             bool ValidNumber = false;                       // Assume the number is not valid
-
-            //=============
-            // Setup Environment
-            //=============
-            // Check if all values are expected to be positive
-            if (MinValue >= 0) { Positive = true; }
 
             //=============
             // Body
@@ -67,7 +60,7 @@ namespace Orias_RNG
                 Results = (LongRand % Selections) + Offset;
 
                 // If all values are expected to be positive, take the absolute value of the generated number
-                if (Positive)
+                if (Positive_Only)
 				{ Results = Math.Abs(Results); }
 
                 // Check if it is fair and within the range
