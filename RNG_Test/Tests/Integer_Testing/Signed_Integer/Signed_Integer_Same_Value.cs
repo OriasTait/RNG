@@ -12,17 +12,17 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
-		private void Signed_BYTE_Same_Value()
+		private void Signed_Integer_Same_Value()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed BYTE when the parameters that are provided
+		Test the Random Number Generator for and Signed Integer when the parameters that are provided
 		are the same value.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Signed BYTE values.
+		Randomly generated Signed Integer values.
 		===============================================================================================
 		*/
 		{
@@ -30,8 +30,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			sbyte MinValue = sbyte.MinValue;
-			sbyte MaxValue = sbyte.MaxValue;
+			int MinValue = int.MinValue;
+			int MaxValue = int.MaxValue;
 
 			//=============
 			// Body
@@ -41,6 +41,6 @@ namespace RNG_Test
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MinValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MaxValue) + "\t");
 			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)100, (byte)100));
-		} // private void Signed_BYTE_Same_Value
-	} // partial class BYTE_Testing
+		} // private void Signed_Integer_Same_Value
+	} // partial class Integer_Testing
 } // namespace RNG_Test

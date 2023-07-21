@@ -14,17 +14,14 @@ namespace RNG_Test
 {
 	partial class Menus
 	{
-		public void Main_Menu()
+		public void Integer_Menu()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Loop through the main menu until exit has been chosen
+		Loop through the tests for the Integer data type.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Presentation of the chosen option.
-		-----------------------------------------------------------------------------------------------
-		NOTES:
-		- Note 1
 		===============================================================================================
 		*/
 		{
@@ -32,6 +29,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			char Key_Pressed;
+
+			Integer_Testing BYTE_Test = new Integer_Testing();
 
 			//=============
 			// Body
@@ -42,27 +41,26 @@ namespace RNG_Test
 				Con.Clear();
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  1 => Test BYTE");
-				Con.WriteLine(@"  2 => Test Integer");
+				Con.WriteLine(@"  1 => Signed 32-bit integer");
+				//Con.WriteLine(@"  2 => Unsigned 32-bit integer");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  X => Exit the this menu");
+				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");
-				Con.Write(@"Press any key to continue...");
-				Con.WriteLine(@"");
+				Con.WriteLine(@"Press any key to continue...");
 				Key_Pressed = Con.ReadKey().KeyChar;
 
 				// Check the key that was pressed
 				switch (Key_Pressed)
 				{
-					// BYTES
+					// Signed Integer
 					case '1':
-						BYTE_Menu();
+						BYTE_Test.Signed_Integer();
 						break;
 
-					// BYTES
-					case '2':
-						Integer_Menu();
-						break;
+					//// Unsigned Integer
+					//case '2':
+					//	BYTE_Test.Unsigned_Integer();
+					//	break;
 
 					// Exit the Main loop
 					case 'x':
@@ -70,6 +68,6 @@ namespace RNG_Test
 						break;
 				}
 			} while ((Key_Pressed != 'x') && (Key_Pressed != 'X'));
-		} // public void Main_Menu
+		} // public void Integer_Menu
 	} // partial class Menus
 } // namespace RNG_Test

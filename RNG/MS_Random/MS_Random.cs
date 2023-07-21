@@ -42,7 +42,11 @@ namespace Orias_RNG
             byte[] Buffer = new byte[8];                    // Long data types => 8 bytes
             long Offset = MinValue;                         // Offset from 0
             long Selections = (MaxValue - MinValue) + 1;    // The number of selections possible
-            bool ValidNumber = false;                       // Assume the number is not valid
+
+            //=============
+            // Setup Environment
+            //=============
+            ValidNumber = false;   // Start by assuming the number is not valid
 
             //=============
             // Body

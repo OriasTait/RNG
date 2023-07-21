@@ -31,16 +31,20 @@ namespace Orias_RNG
             // Variables - Standard
             //=============
             long Results;               // The results to return
-            bool ValidNumber = false;   // Flag to indicate if the results are valid.
+            //bool ValidNumber = false;   // Flag to indicate if the results are valid.
 
             //=============
             // Variables - Random Number Generation
             //=============
-            //long LongRand;                                  // The long number that is randomly generated
             long Offset = MinValue;                         // Offset from 0
             byte[] RandomNumber = new byte[8];              // Long data types => 8 bytes
             RandomNumberGenerator RNG = RandomNumberGenerator.Create();
             long Selections = (MaxValue - MinValue) + 1;    // The number of selections possible
+
+            //=============
+            // Setup Environment
+            //=============
+            ValidNumber = false;   // Start by assuming the number is not valid
 
             //=============
             // Body

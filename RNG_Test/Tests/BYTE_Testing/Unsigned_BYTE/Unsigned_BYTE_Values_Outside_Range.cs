@@ -27,7 +27,7 @@ namespace RNG_Test
 		-----------------------------------------------------------------------------------------------
 		NOTES:
 		- When a value is passed to the RNG, the appropriate overloaded function will be called.
-		  Because of this, a value outside of an Unsigned BYTE becomes an int/long depending on the
+		  Because of this, a value outside of a larger unit becomes an int/long depending on the
 		  value.  To ensure the RESULTS are not outside the range, the calling process needs to
 		  validate the values PRIOR to calling.
 		===============================================================================================

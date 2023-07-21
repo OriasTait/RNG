@@ -12,16 +12,16 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
-		private void Signed_BYTE_Loop()
+		private void Signed_Integer_Loop()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed BYTE within a loop.
+		Test the Random Number Generator for and Signed Integer within a loop.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Signed BYTE values.
+		Randomly generated Signed Integer values.
 		===============================================================================================
 		*/
 		{
@@ -29,8 +29,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			sbyte MinValue = sbyte.MinValue;
-			sbyte MaxValue = sbyte.MaxValue;
+			int MinValue = int.MinValue;
+			int MaxValue = int.MaxValue;
 
 			//=============
 			// Body
@@ -45,6 +45,6 @@ namespace RNG_Test
 				Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
 				Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
 			}
-		} // private void Signed_BYTE_Loop
-	} // partial class BYTE_Testing
+		} // private void Signed_Integer_Loop
+	} // partial class Integer_Testing
 } // namespace RNG_Test

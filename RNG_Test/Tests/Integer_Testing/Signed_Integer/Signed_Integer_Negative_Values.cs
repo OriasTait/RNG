@@ -12,10 +12,10 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S2234:Arguments should be passed in the same order as the method parameters", Justification = "<Pending>")]
-		private void Signed_BYTE_Negative_Values()
+		private void Signed_Integer_Negative_Values()
 		/*
 		===============================================================================================
 		PURPOSE:
@@ -32,8 +32,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			sbyte MinValue = sbyte.MinValue;
-			sbyte MaxValue = -1;
+			int MinValue = int.MinValue;
+			int MaxValue = -1;
 
 			//=============
 			// Body
@@ -49,6 +49,6 @@ namespace RNG_Test
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
 			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-		} // private void Signed_BYTE_Negative_Values
-	} // partial class BYTE_Testing
+		} // private void Signed_Integer_Negative_Values
+	} // partial class Integer_Testing
 } // namespace RNG_Test

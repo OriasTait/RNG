@@ -22,7 +22,7 @@ namespace RNG_Test
 		correct order => Minimum value, Maximum value
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Unsigned BYTE values.
+		Randomly generated Signed BYTE values.
 		===============================================================================================
 		*/
 		{

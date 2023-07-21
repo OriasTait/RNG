@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menus\Integer_Menu.cs" />
     <Compile Include="Menus\BYTE_Menu.cs" />
     <Compile Include="Menus\Main_Menu.cs" />
     <Compile Include="Program.cs" />
@@ -61,6 +62,13 @@
     <Compile Include="Tests\BYTE_Testing\Unsigned_BYTE\Unsigned_BYTE_Incorrect_Order.cs" />
     <Compile Include="Tests\BYTE_Testing\Unsigned_BYTE\Unsigned_BYTE_Correct_Order.cs" />
     <Compile Include="Tests\BYTE_Testing\Unsigned_BYTE\Unsigned_BYTE.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">
@@ -76,6 +84,8 @@
       <Name>RNG</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Tests\Integer_Testing\Unsigned_Integer\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

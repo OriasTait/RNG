@@ -22,12 +22,12 @@ namespace RNG_Test
 		are outside the range of an Unsigned BYTE.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		An error message if the values are outside the range; otherwise a randomly generated Unsigned
+		An error message if the values are outside the range; otherwise a randomly generated Signed
 		BYTE value.
 		-----------------------------------------------------------------------------------------------
 		NOTES:
 		- When a value is passed to the RNG, the appropriate overloaded function will be called.
-		  Because of this, a value outside of an Signed BYTE becomes an int/long depending on the
+		  Because of this, a value outside of an Signed BYTE becomes a larger unit depending on the
 		  value.  To ensure the RESULTS are not outside the range, the calling process needs to
 		  validate the values PRIOR to calling.
 		===============================================================================================

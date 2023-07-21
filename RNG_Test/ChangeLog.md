@@ -5,6 +5,7 @@
 - New Data Types
   - Signed Byte
   - Unsigned Byte
+  - Signed Integer
 - Bug Fixes
-- Expanded Test scenarios
+- Expanded Test cases
 - Processing Optimization
