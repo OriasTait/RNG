@@ -31,7 +31,6 @@ namespace Orias_RNG
             // Variables - Standard
             //=============
             long Results;               // The results to return
-            //bool ValidNumber = false;   // Flag to indicate if the results are valid.
 
             //=============
             // Variables - Random Number Generation
@@ -44,7 +43,7 @@ namespace Orias_RNG
             //=============
             // Setup Environment
             //=============
-            ValidNumber = false;   // Start by assuming the number is not valid
+            Valid_Number = false;   // Start by assuming the number is not valid
 
             //=============
             // Body
@@ -55,22 +54,22 @@ namespace Orias_RNG
 				RNG.GetBytes(RandomNumber);
 
                 // Convert to a long number
-                LongRand = BitConverter.ToInt64(RandomNumber, 0);
+                Long_Rand = BitConverter.ToInt64(RandomNumber, 0);
 
                 // Assign the results based on the random number
-                Results = (LongRand % Selections) + Offset;
+                Results = (Long_Rand % Selections) + Offset;
 
                 // Check if it is fair and within the range
-                if ((IsFair(LongRand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
+                if ((IsFair(Long_Rand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
                 {
                     // If all values are expected to be positive, take the absolute value of the generated number
                     if (Positive_Only) { Results = Math.Abs(Results); }
 
                     // Set the flag for valid number to true
-                    ValidNumber = true;
+                    Valid_Number = true;
                 }
 			}
-			while (!ValidNumber);
+			while (!Valid_Number);
 
             //=============
             // Cleanup Environment

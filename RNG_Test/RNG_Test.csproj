@@ -69,6 +69,7 @@
     <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Loop.cs" />
     <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Correct_Order.cs" />
     <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Signed_Integer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">
@@ -84,8 +85,6 @@
       <Name>RNG</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\Integer_Testing\Unsigned_Integer\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

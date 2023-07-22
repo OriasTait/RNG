@@ -30,7 +30,7 @@ namespace RNG_Test
 			//=============
 			char Key_Pressed;
 
-			Integer_Testing BYTE_Test = new Integer_Testing();
+			Integer_Testing Integer_Test = new Integer_Testing();
 
 			//=============
 			// Body
@@ -42,7 +42,7 @@ namespace RNG_Test
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  1 => Signed 32-bit integer");
-				//Con.WriteLine(@"  2 => Unsigned 32-bit integer");
+				Con.WriteLine(@"  2 => Unsigned 32-bit integer");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");
@@ -54,13 +54,13 @@ namespace RNG_Test
 				{
 					// Signed Integer
 					case '1':
-						BYTE_Test.Signed_Integer();
+						Integer_Test.Signed_Integer();
 						break;
 
-					//// Unsigned Integer
-					//case '2':
-					//	BYTE_Test.Unsigned_Integer();
-					//	break;
+					// Unsigned Integer
+					case '2':
+						Integer_Test.Unsigned_Integer();
+						break;
 
 					// Exit the Main loop
 					case 'x':

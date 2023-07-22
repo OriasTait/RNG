@@ -13,19 +13,19 @@ namespace RNG_Test
 {
 	partial class Integer_Testing
 	{
-		public void Signed_Integer()
+		public void Unsigned_Integer()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Loop through the tests for a Signed Integer data type.
+		Loop through the tests for a Unsigned Integer data type.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Presentation of the chosen option.
 		-----------------------------------------------------------------------------------------------
 		NOTES:
-		- This tests the generation of a Signed 32-bit integer.
+		- This tests the generation of an Unsigned 32-bit integer.
 
-		- The range of possible values is -2,147,483,648 to 2,147,483,647
+		- The range of possible values is 0 to 4,294,967,295
 		===============================================================================================
 		*/
 		{
@@ -37,37 +37,37 @@ namespace RNG_Test
 			//=============
 			// Body
 			//=============
-			Con.WriteLine(@"Testing of a Signed 32-bit integer");
+			Con.WriteLine(@"Testing of a Unsigned 32-bit integer");
 
 			//=============
 			// Pass values in the incorrect order
 			//=============
-			Signed_Integer_Incorect_Order();
+			//Signed_Integer_Incorect_Order();
 
 			//=============
 			// Pass Negative values
 			//=============
-			Signed_Integer_Negative_Values();
+			//Signed_Integer_Negative_Values();
 
 			//=============
 			// Pass the same value
 			//=============
-			Signed_Integer_Same_Value();
+			//Signed_Integer_Same_Value();
 
 			//=============
 			// Pass values outside the range
 			//=============
-			Signed_Integer_Values_Outside_Range();
+			//Signed_Integer_Values_Outside_Range();
 
 			//=============
 			// Pass the values in the correct order
 			//=============
-			Signed_Integer_Correct_Order();
+			//Signed_Integer_Correct_Order();
 
 			//=============
 			// Do a loop
 			//=============
-			Signed_Integer_Loop();
+			//Signed_Integer_Loop();
 
 			//=============
 			// Cleanup Environment

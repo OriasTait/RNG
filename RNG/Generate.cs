@@ -28,10 +28,10 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Byte
-            byte Results = Byte.Parse(GeneratedNumber.ToString());
+            byte Results = Byte.Parse(Generated_Number.ToString());
 
             //=============
             // Cleanup Environment
@@ -59,10 +59,10 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Byte
-            sbyte Results = SByte.Parse(GeneratedNumber.ToString());
+            sbyte Results = SByte.Parse(Generated_Number.ToString());
 
             //=============
             // Cleanup Environment
@@ -90,10 +90,10 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Integer
-            int Results = int.Parse(GeneratedNumber.ToString());
+            int Results = int.Parse(Generated_Number.ToString());
 
             //=============
             // Cleanup Environment
@@ -121,10 +121,10 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            GeneratedNumber = Generate_Number(MinValue, MaxValue);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Integer
-            long Results = int.Parse(GeneratedNumber.ToString());
+            long Results = int.Parse(Generated_Number.ToString());
 
             //=============
             // Cleanup Environment
