@@ -43,11 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menus\Boolean_Menu.cs" />
     <Compile Include="Menus\Integer_Menu.cs" />
     <Compile Include="Menus\BYTE_Menu.cs" />
     <Compile Include="Menus\Main_Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Correct_Order.cs" />
     <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE.cs" />
     <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Correct_Order.cs" />
     <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Incorrect_Order.cs" />

@@ -13,9 +13,10 @@ At the core, the random number generated is of type long. This provides a maximu
 converting to the long data type, generating the number, then converting back to the original data type.
 
 The following data types are able to be randomly generated:
-- Byte/System.Byte		=> Unsigned 8-bit integer (Range: 0 to 255)
-- SByte/System.SByte	=> Signed 8-bit integer (Range: -128 to 127)
+- byte/System.Byte		=> Unsigned 8-bit integer (Range: 0 to 255)
+- sbyte/System.SByte	=> Signed 8-bit integer (Range: -128 to 127)
 - int/System.Int32		=> Signed 32-bit integer (Range: -2,147,483,648 to 2,147,483,647)
+- uint/System.Int32		=> Unsigned 32-bit integer (Range: 0 to 4,294,967,295)
 
 ## Microsoft Random Class
 The Microsoft Random Class is based on a modified version of Donald E. Knuth's subtractive random number generator
