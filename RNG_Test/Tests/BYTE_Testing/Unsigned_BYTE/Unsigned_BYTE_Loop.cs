@@ -18,7 +18,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Unsigned BYTE within a loop.
+		Test the Random Number Generator for an Unsigned BYTE within a loop.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Randomly generated Unsigned BYTE values.

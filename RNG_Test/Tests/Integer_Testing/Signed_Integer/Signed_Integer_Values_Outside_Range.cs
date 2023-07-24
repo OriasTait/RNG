@@ -27,7 +27,7 @@ namespace RNG_Test
 		-----------------------------------------------------------------------------------------------
 		NOTES:
 		- When a value is passed to the RNG, the appropriate overloaded function will be called.
-		  Because of this, a value outside of an Signed Integer becomes a larger unit depending on the
+		  Because of this, a value outside of a Signed Integer becomes a larger unit depending on the
 		  value.  To ensure the RESULTS are not outside the range, the calling process needs to
 		  validate the values PRIOR to calling.
 		===============================================================================================
@@ -42,7 +42,7 @@ namespace RNG_Test
 			bool IsValid = true;  // Assume the value is valid
 
 			//=============
-			// Variables - outside the scope of BYTE
+			// Variables - outside the scope of a Signed Integer
 			//=============
 			long Bad_MinValue = int.MinValue;
 			long Bad_MaxValue = int.MaxValue;
@@ -50,6 +50,7 @@ namespace RNG_Test
 			//=============
 			// Setup Environment
 			//=============
+			// Performing this calculation at declaration causes an overflow error.
 			Bad_MinValue -= 1;
 			Bad_MaxValue += 1;
 
@@ -67,7 +68,7 @@ namespace RNG_Test
 			}
 
 			// Validate the maximum value
-			if (Bad_MaxValue > sbyte.MaxValue)
+			if (Bad_MaxValue > int.MaxValue)
 			{
 				Con.WriteLine(@"Intended value ({0}) cannot be converted to SIGNED Integer.", Bad_MaxValue);
 				IsValid = false;

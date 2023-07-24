@@ -18,7 +18,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Unsigned BYTE when the parameters are provided in the
+		Test the Random Number Generator for an Unsigned BYTE when the parameters are provided in the
 		correct order => Minimum value, Maximum value
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:

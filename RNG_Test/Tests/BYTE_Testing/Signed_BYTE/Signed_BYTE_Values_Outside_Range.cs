@@ -18,7 +18,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed BYTE when the parameters that are provided
+		Test the Random Number Generator for a Signed BYTE when the parameters that are provided
 		are outside the range of an Unsigned BYTE.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:

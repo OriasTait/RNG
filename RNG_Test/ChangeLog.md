@@ -6,6 +6,9 @@
   - Signed Byte
   - Unsigned Byte
   - Signed Integer
+  - Unsigned Integer
 - Bug Fixes
 - Expanded Test cases
 - Processing Optimization
+- Tests not occuring for the correct type
+

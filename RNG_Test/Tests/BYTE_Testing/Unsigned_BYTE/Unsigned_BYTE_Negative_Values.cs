@@ -45,10 +45,10 @@ namespace RNG_Test
 			bool IsValid = true;  // Assume the value is valid
 
 			//=============
-			// Variables - outside the scope of BYTE
+			// Variables - outside the scope of an unsigned BYTE
 			//=============
-			int Bad_MinValue = byte.MinValue - 1;
-			int Bad_MaxValue = (byte.MaxValue + 1) * -1;
+			int Bad_MinValue = sbyte.MinValue;
+			int Bad_MaxValue = byte.MinValue - 1;
 
 			//=============
 			// Body

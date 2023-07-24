@@ -18,7 +18,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed Integer within a loop.
+		Test the Random Number Generator for a Signed Integer within a loop.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Randomly generated Signed Integer values.

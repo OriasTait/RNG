@@ -82,7 +82,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for Integers
+        - This method is for Signed Integers
         ===============================================================================================
         */
         {
@@ -100,6 +100,37 @@ namespace Orias_RNG
             //=============
             return Results;
         } // public int Generate(int MinValue, int MaxValue)
+
+        public uint Generate(uint MinValue, uint MaxValue)
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Randomly generate a method to use in order to generate a random number from the given MinValue
+        up to (and including) the MaxValue.
+        -----------------------------------------------------------------------------------------------
+        PARAMETERS:
+        - MinValue  => The minimum value to return
+        - MaxValue  => The maximum value to return
+        -----------------------------------------------------------------------------------------------
+        NOTES:
+        - This method is for Unsigned Integers
+        ===============================================================================================
+        */
+        {
+            //=============
+            // Body
+            //=============
+            // Generate the number
+            Generated_Number = Generate_Number(MinValue, MaxValue);
+
+            // Convert the number back to a Integer
+            uint Results = uint.Parse(Generated_Number.ToString());
+
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
+        } // public uint Generate(int MinValue, int MaxValue)
 
         public long Generate(long MinValue, long MaxValue)
         /*

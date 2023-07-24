@@ -19,7 +19,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed Integer when the parameters are provided in the
+		Test the Random Number Generator for a Signed Integer when the parameters are provided in the
 		incorrect order => Maximum value, Minimum value
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:

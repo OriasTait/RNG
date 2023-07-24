@@ -42,32 +42,32 @@ namespace RNG_Test
 			//=============
 			// Pass values in the incorrect order
 			//=============
-			//Signed_Integer_Incorect_Order();
+			Unsigned_Integer_Incorect_Order();
 
 			//=============
 			// Pass Negative values
 			//=============
-			//Signed_Integer_Negative_Values();
+			Unsigned_Integer_Negative_Values();
 
 			//=============
 			// Pass the same value
 			//=============
-			//Signed_Integer_Same_Value();
+			Unsigned_Integer_Same_Value();
 
 			//=============
 			// Pass values outside the range
 			//=============
-			//Signed_Integer_Values_Outside_Range();
+			Unsigned_Integer_Values_Outside_Range();
 
 			//=============
 			// Pass the values in the correct order
 			//=============
-			//Signed_Integer_Correct_Order();
+			Unsigned_Integer_Correct_Order();
 
 			//=============
 			// Do a loop
 			//=============
-			//Signed_Integer_Loop();
+			Unsigned_Integer_Loop();
 
 			//=============
 			// Cleanup Environment

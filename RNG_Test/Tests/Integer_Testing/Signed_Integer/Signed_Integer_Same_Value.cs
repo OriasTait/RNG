@@ -18,7 +18,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed Integer when the parameters that are provided
+		Test the Random Number Generator for a Signed Integer when the parameters that are provided
 		are the same value.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
@@ -39,8 +39,7 @@ namespace RNG_Test
 			Con.WriteLine();
 			Con.WriteLine(@"Pass the same value");
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MinValue) + "\t");
-			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MaxValue) + "\t");
-			Con.WriteLine("{0}", MyRandomNumber.Generate((byte)100, (byte)100));
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
 		} // private void Signed_Integer_Same_Value
 	} // partial class Integer_Testing
 } // namespace RNG_Test

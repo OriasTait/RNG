@@ -14,15 +14,15 @@ namespace RNG_Test
 {
 	partial class Integer_Testing
 	{
-		private void Signed_Integer_Correct_Order()
+		private void Unsigned_Integer_Same_Value()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for a Signed Integer when the parameters are provided in the
-		correct order => Minimum value, Maximum value
+		Test the Random Number Generator for an Unsigned Integer when the parameters that are provided
+		are the same value.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Signed Integer values.
+		Randomly generated Unsigned Integer values.
 		===============================================================================================
 		*/
 		{
@@ -30,19 +30,16 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			int MinValue = int.MinValue;
-			int MaxValue = int.MaxValue;
+			uint MinValue = uint.MinValue;
+			uint MaxValue = uint.MaxValue;
 
 			//=============
 			// Body
 			//=============
 			Con.WriteLine();
-			Con.WriteLine(@"Pass the valid values in the correct order (MinValue, MaxValue)");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-		} // private void Signed_Integer_Correct_Order
+			Con.WriteLine(@"Pass the same value");
+			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MinValue) + "\t");
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
+		} // private void Unsigned_Integer_Same_Value
 	} // partial class Integer_Testing
 } // namespace RNG_Test

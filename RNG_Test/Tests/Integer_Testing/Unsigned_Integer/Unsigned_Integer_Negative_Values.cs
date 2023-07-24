@@ -12,14 +12,14 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
-		private void Unsigned_BYTE_Values_Outside_Range()
+		private void Unsigned_Integer_Negative_Values()
 		/*
 		===============================================================================================
 		PURPOSE:
 		Test the Random Number Generator for an Unsigned BYTE when the parameters that are provided
-		are outside the range of an Unsigned BYTE.
+		are negative.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		An error message if the values are outside the range; otherwise a randomly generated Unsigned
@@ -27,9 +27,12 @@ namespace RNG_Test
 		-----------------------------------------------------------------------------------------------
 		NOTES:
 		- When a value is passed to the RNG, the appropriate overloaded function will be called.
-		  Because of this, a value outside of a larger unit becomes an int/long depending on the
-		  value.  To ensure the RESULTS are not outside the range, the calling process needs to
+		  Because of this, a value outside of an Unsigned Integer becomes a larger unit depending on
+		  the value.  To ensure the RESULTS are not outside the range, the calling process needs to
 		  validate the values PRIOR to calling.
+
+		- Passing a negative value to a Unsigned 32-bit integer causes it to cycle.
+		  For example -1 becomes 4,294,967,295.
 		===============================================================================================
 		*/
 		{
@@ -37,37 +40,34 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			byte MinValue = byte.MinValue;
-			byte MaxValue = byte.MaxValue;
+			uint MinValue = uint.MinValue;
+			uint MaxValue = uint.MaxValue;
 			bool IsValid = true;  // Assume the value is valid
 
 			//=============
-			// Variables - outside the scope of BYTE
+			// Variables - outside the scope of an Unsigned Integer
 			//=============
-			int Bad_MinValue = byte.MinValue - 1;
-			int Bad_MaxValue = byte.MaxValue + 1;
+			int Bad_MinValue = int.MinValue;
+			int Bad_MaxValue = -1;
 
 			//=============
 			// Body
 			//=============
 			Con.WriteLine();
-			Con.WriteLine(@"Pass values outside the range");
+			Con.WriteLine(@"Pass negative values");
 
-			// Validate the minimum value
-			if (Bad_MinValue < byte.MinValue)
+			if (Bad_MinValue < 0)
 			{
-				Con.WriteLine(@"Intended value ({0}) cannot be converted to UNSIGNED BYTE.", Bad_MinValue);
+				Con.WriteLine(@"Intended value ({0}) cannot be converted to UNSIGNED INTEGER.", Bad_MinValue);
 				IsValid = false;
 			}
 
-			// Validate the maximum value
-			if (Bad_MaxValue > byte.MaxValue)
+			if (Bad_MaxValue < 0)
 			{
-				Con.WriteLine(@"Intended value ({0}) cannot be converted to UNSIGNED BYTE.", Bad_MaxValue);
+				Con.WriteLine(@"Intended value ({0}) cannot be converted to UNSIGNED INTEGER.", Bad_MaxValue);
 				IsValid = false;
 			}
 
-			// Perform the call if we are still valid
 			if (IsValid)
 			{
 				Con.Write("{0}", MyRandomNumber.Generate(Bad_MinValue, MaxValue) + "\t");
@@ -76,6 +76,6 @@ namespace RNG_Test
 				Con.Write("{0}", MyRandomNumber.Generate(MinValue, Bad_MaxValue) + "\t");
 				Con.WriteLine("{0}", MyRandomNumber.Generate(Bad_MinValue, Bad_MaxValue));
 			}
-		} // private void Unsigned_BYTE_Values_Outside_Range
-	} // partial class BYTE_Testing
+		} // private void Unsigned_Integer_Negative_Values
+	} // partial class Integer_Testing
 } // namespace RNG_Test
