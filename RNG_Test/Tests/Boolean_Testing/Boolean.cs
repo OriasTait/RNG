@@ -17,15 +17,19 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Loop through the tests for a Unsigned Integer data type.
+		Loop through the tests for a boolean data type.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Presentation of the chosen option.
 		-----------------------------------------------------------------------------------------------
 		NOTES:
-		- This tests the generation of an Unsigned 32-bit integer.
+		- This tests the generation of a boolean.
 
-		- The range of possible values is 0 to 4,294,967,295
+		- The range of possible values is "true" or "false".
+
+		- Because the boolean can only have 2 values, the following tests are invalid:
+		  - Pass Negative values
+		  - Pass values outside the range
 		===============================================================================================
 		*/
 		{
@@ -42,22 +46,12 @@ namespace RNG_Test
 			//=============
 			// Pass values in the incorrect order
 			//=============
-			//Unsigned_Integer_Incorect_Order();
-
-			//=============
-			// Pass Negative values
-			//=============
-			//Unsigned_Integer_Negative_Values();
+			Boolean_Incorect_Order();
 
 			//=============
 			// Pass the same value
 			//=============
-			//Unsigned_Integer_Same_Value();
-
-			//=============
-			// Pass values outside the range
-			//=============
-			//Unsigned_Integer_Values_Outside_Range();
+			Boolean_Same_Value();
 
 			//=============
 			// Pass the values in the correct order
@@ -67,7 +61,7 @@ namespace RNG_Test
 			//=============
 			// Do a loop
 			//=============
-			//Unsigned_Integer_Loop();
+			Boolean_Loop();
 
 			//=============
 			// Cleanup Environment

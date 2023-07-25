@@ -51,6 +51,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Boolean_Testing\Boolean.cs" />
     <Compile Include="Tests\Boolean_Testing\Boolean_Correct_Order.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Incorrect_Order.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Same_Value.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Loop.cs" />
     <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE.cs" />
     <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Correct_Order.cs" />
     <Compile Include="Tests\BYTE_Testing\Signed_BYTE\Signed_BYTE_Incorrect_Order.cs" />
