@@ -41,8 +41,10 @@ namespace RNG_Test
 				Con.Clear();
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  1 => Signed 32-bit integer");
-				Con.WriteLine(@"  2 => Unsigned 32-bit integer");
+				Con.WriteLine(@"  1 => Signed 16-bit integer");
+				Con.WriteLine(@"  2 => Unsigned 16-bit integer");
+				Con.WriteLine(@"  3 => Signed 32-bit integer");
+				Con.WriteLine(@"  4 => Unsigned 32-bit integer");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");
@@ -52,13 +54,16 @@ namespace RNG_Test
 				// Check the key that was pressed
 				switch (Key_Pressed)
 				{
+					// Signed Short
+					// Unsigned Short
+
 					// Signed Integer
-					case '1':
+					case '3':
 						Integer_Test.Signed_Integer();
 						break;
 
 					// Unsigned Integer
-					case '2':
+					case '4':
 						Integer_Test.Unsigned_Integer();
 						break;
 
