@@ -18,7 +18,7 @@ namespace RNG_Test
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed Integer when the parameters that are provided
+		Test the Random Number Generator for an Unsigned Integer when the parameters that are provided
 		are outside the range of an Unsigned Integer.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:

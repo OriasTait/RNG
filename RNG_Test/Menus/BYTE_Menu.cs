@@ -41,8 +41,8 @@ namespace RNG_Test
 				Con.Clear();
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  1 => Signed 8-bit integer");
-				Con.WriteLine(@"  2 => Unsigned 8-bit integer");
+				Con.WriteLine(@"  1 => Signed 8-bit integer   (datatype: sbyte)");
+				Con.WriteLine(@"  2 => Unsigned 8-bit integer (datatype: byte)");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");

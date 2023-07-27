@@ -14,12 +14,12 @@ namespace RNG_Test
 {
 	partial class Integer_Testing
 	{
-		private void Signed_Integer_Values_Outside_Range()
+		private void Unsigned_Short_Values_Outside_Range()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for and Signed Integer when the parameters that are provided
-		are outside the range of an Signed Integer.
+		Test the Random Number Generator for an Unsigned Short when the parameters that are provided
+		are outside the range of an Unsigned Integer.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		An error message if the values are outside the range; otherwise a randomly generated Signed
@@ -27,7 +27,7 @@ namespace RNG_Test
 		-----------------------------------------------------------------------------------------------
 		NOTES:
 		- When a value is passed to the RNG, the appropriate overloaded function will be called.
-		  Because of this, a value outside of a Signed Integer becomes a larger unit depending on the
+		  Because of this, a value outside of an Unsigned Integer becomes a larger unit depending on the
 		  value.  To ensure the RESULTS are not outside the range, the calling process needs to
 		  validate the values PRIOR to calling.
 		===============================================================================================
@@ -37,15 +37,15 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			int MinValue = int.MinValue;
-			int MaxValue = int.MaxValue;
+			ushort MinValue = ushort.MinValue;
+			ushort MaxValue = ushort.MaxValue;
 			bool IsValid = true;  // Assume the value is valid
 
 			//=============
-			// Variables - outside the scope of a Signed Integer
+			// Variables - outside the scope of an Unsigned Integer
 			//=============
-			long Bad_MinValue = int.MinValue;
-			long Bad_MaxValue = int.MaxValue;
+			long Bad_MinValue = ushort.MinValue;
+			long Bad_MaxValue = ushort.MaxValue;
 
 			//=============
 			// Setup Environment
@@ -61,16 +61,16 @@ namespace RNG_Test
 			Con.WriteLine(@"Pass values outside the range");
 
 			// Validate the minimum value
-			if (Bad_MinValue < int.MinValue)
+			if (Bad_MinValue < ushort.MinValue)
 			{
-				Con.WriteLine(@"Intended value ({0}) cannot be converted to SIGNED Integer.", Bad_MinValue);
+				Con.WriteLine(@"Intended value ({0}) cannot be converted to UNSIGNED Short.", Bad_MinValue);
 				IsValid = false;
 			}
 
 			// Validate the maximum value
-			if (Bad_MaxValue > int.MaxValue)
+			if (Bad_MaxValue > ushort.MaxValue)
 			{
-				Con.WriteLine(@"Intended value ({0}) cannot be converted to SIGNED Integer.", Bad_MaxValue);
+				Con.WriteLine(@"Intended value ({0}) cannot be converted to UNSIGNED Short.", Bad_MaxValue);
 				IsValid = false;
 			}
 
@@ -83,6 +83,6 @@ namespace RNG_Test
 				Con.Write("{0}", MyRandomNumber.Generate(MinValue, Bad_MaxValue) + "\t");
 				Con.WriteLine("{0}", MyRandomNumber.Generate(Bad_MinValue, Bad_MaxValue));
 			}
-		} // private void Signed_Integer_Values_Outside_Range
+		} // private void Unsigned_Short_Values_Outside_Range
 	} // partial class Integer_Testing
 } // namespace RNG_Test

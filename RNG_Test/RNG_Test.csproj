@@ -75,6 +75,20 @@
     <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Loop.cs" />
     <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Correct_Order.cs" />
     <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short.cs" />
     <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Loop.cs" />
     <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Values_Outside_Range.cs" />
     <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Negative_Values.cs" />
@@ -97,8 +111,6 @@
       <Name>RNG</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tests\Short\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

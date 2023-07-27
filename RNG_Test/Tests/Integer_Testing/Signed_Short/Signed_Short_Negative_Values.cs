@@ -15,15 +15,15 @@ namespace RNG_Test
 	partial class Integer_Testing
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S2234:Arguments should be passed in the same order as the method parameters", Justification = "<Pending>")]
-		private void Signed_Integer_Negative_Values()
+		private void Signed_Short_Negative_Values()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for a Signed BYTE when the parameters that are provided are
+		Test the Random Number Generator for a Signed Short when the parameters that are provided are
 		negative.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Signed Integer values.
+		Randomly generated Signed Short values.
 		===============================================================================================
 		*/
 		{
@@ -31,8 +31,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			int MinValue = int.MinValue;
-			int MaxValue = -1;
+			short MinValue = short.MinValue;
+			short MaxValue = -1;
 
 			//=============
 			// Body
@@ -48,6 +48,6 @@ namespace RNG_Test
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
 			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-		} // private void Signed_Integer_Negative_Values
+		} // private void Signed_Short_Negative_Values
 	} // partial class Integer_Testing
 } // namespace RNG_Test

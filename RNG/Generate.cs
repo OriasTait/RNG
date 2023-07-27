@@ -182,7 +182,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for Long
+        - This method is for short
         ===============================================================================================
         */
         {
@@ -199,7 +199,38 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // public short Generate(int MinValue, int MaxValue)
+        } // public short Generate(short MinValue, short MaxValue)
+
+        public ushort Generate(ushort MinValue, ushort MaxValue)
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Randomly generate a method to use in order to generate a random number from the given MinValue
+        up to (and including) the MaxValue.
+        -----------------------------------------------------------------------------------------------
+        PARAMETERS:
+        - MinValue  => The minimum value to return
+        - MaxValue  => The maximum value to return
+        -----------------------------------------------------------------------------------------------
+        NOTES:
+        - This method is for unsigned short
+        ===============================================================================================
+        */
+        {
+            //=============
+            // Body
+            //=============
+            // Generate the number
+            Generated_Number = Generate_Number(MinValue, MaxValue);
+
+            // Convert the number back to a Integer
+            ushort Results = ushort.Parse(Generated_Number.ToString());
+
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
+        } // public ushort Generate(ushort MinValue, ushort MaxValue)
 
         public long Generate(long MinValue, long MaxValue)
         /*
@@ -230,6 +261,6 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // public int Generate(int MinValue, int MaxValue)
+        } // public int Generate(long MinValue, long MaxValue)
     } // public class RNG
 } // namespace Orias_RNG

@@ -15,15 +15,15 @@ namespace RNG_Test
 	partial class Integer_Testing
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S2234:Arguments should be passed in the same order as the method parameters", Justification = "<Pending>")]
-		private void Signed_Integer_Negative_Values()
+		private void Unsigned_Short_Incorect_Order()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for a Signed BYTE when the parameters that are provided are
-		negative.
+		Test the Random Number Generator for an Unsigned Short when the parameters are provided in the
+		incorrect order => Maximum value, Minimum value
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Signed Integer values.
+		Randomly generated Unsigned Short values.
 		===============================================================================================
 		*/
 		{
@@ -31,23 +31,19 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			int MinValue = int.MinValue;
-			int MaxValue = -1;
+			ushort MinValue = ushort.MinValue;
+			ushort MaxValue = ushort.MaxValue;
 
 			//=============
 			// Body
 			//=============
 			Con.WriteLine();
-			Con.WriteLine(@"Pass negative values");
-
-			// Pass in the incorrect order
+			Con.WriteLine(@"Pass the values in the incorrect order (MaxValue, MinValue)");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
-
-			// Pass in the correct order
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-		} // private void Signed_Integer_Negative_Values
+			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
+			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+		} // private void Unsigned_Short_Incorect_Order
 	} // partial class Integer_Testing
 } // namespace RNG_Test

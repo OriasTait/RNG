@@ -41,7 +41,7 @@ namespace RNG_Test
 				Con.Clear();
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  1 => Boolean");
+				Con.WriteLine(@"  1 => Boolean (datatype: bool)");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");

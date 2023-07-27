@@ -8,6 +8,8 @@
   - Byte, Unsigned
   - Integer, Signed
   - Integer, Unsigned
+  - Short, Signed
+  - Short, Unsigned
 - Bug Fixes
 - Expanded Test cases
 - Processing Optimization

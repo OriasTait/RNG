@@ -16,8 +16,10 @@ The following data types are able to be randomly generated:
 - bool/System.Boolean	=> Structured data type that can only be "true" or "false"
 - byte/System.Byte		=> Unsigned 8-bit integer (Range: 0 to 255)
 - sbyte/System.SByte	=> Signed 8-bit integer (Range: -128 to 127)
+- short/System.Int16	=> Signed 16-bit integer (Range: -32,768 to 32,767)
 - int/System.Int32		=> Signed 32-bit integer (Range: -2,147,483,648 to 2,147,483,647)
 - uint/System.Int32		=> Unsigned 32-bit integer (Range: 0 to 4,294,967,295)
+- ushort/System.Int16	=> Unsigned 16-bit integer (Range: 0 to 65,535)
 
 ## Microsoft Random Class
 The Microsoft Random Class is based on a modified version of Donald E. Knuth's subtractive random number generator
