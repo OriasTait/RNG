@@ -12,19 +12,18 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S2234:Arguments should be passed in the same order as the method parameters", Justification = "<Pending>")]
-		private void Signed_BYTE_Negative_Values()
+		private void Signed_BYTE_Incorect_Order()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for a Signed BYTE when the parameters that are provided are
-		negative.
+		Test the Random Number Generator for a Signed BYTE when the parameters are provided in the
+		incorrect order => Maximum value, Minimum value
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		An error message if the values are outside the range; otherwise a randomly generated Unsigned
-		BYTE value.
+		Randomly generated Signed BYTE values.
 		===============================================================================================
 		*/
 		{
@@ -33,22 +32,18 @@ namespace RNG_Test
 			//=============
 			RNG MyRandomNumber = new RNG();
 			sbyte MinValue = sbyte.MinValue;
-			sbyte MaxValue = -1;
+			sbyte MaxValue = sbyte.MaxValue;
 
 			//=============
 			// Body
 			//=============
 			Con.WriteLine();
-			Con.WriteLine(@"Pass negative values");
-
-			// Pass in the incorrect order
+			Con.WriteLine(@"Pass the values in the incorrect order (MaxValue, MinValue)");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
-
-			// Pass in the correct order
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
-		} // private void Signed_BYTE_Negative_Values
-	} // partial class BYTE_Testing
+			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
+			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
+			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
+		} // private void Signed_BYTE_Incorect_Order
+	} // partial class Integer_Testing
 } // namespace RNG_Test

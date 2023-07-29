@@ -12,14 +12,13 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
-		private void Signed_BYTE_Same_Value()
+		private void Signed_BYTE_Loop()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for a Signed BYTE when the parameters that are provided
-		are the same value.
+		Test the Random Number Generator for a Signed BYTE within a loop.
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
 		Randomly generated Signed BYTE values.
@@ -37,9 +36,15 @@ namespace RNG_Test
 			// Body
 			//=============
 			Con.WriteLine();
-			Con.WriteLine(@"Pass the same value");
-			Con.Write("{0}", MyRandomNumber.Generate(MinValue, MinValue) + "\t");
-			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MaxValue));
-		} // private void Signed_BYTE_Same_Value
-	} // partial class BYTE_Testing
+			Con.WriteLine(@"Generate 5 random numbers 3 times");
+			for (int i = 0; i < 3; i++)
+			{
+				Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
+				Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
+				Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
+				Con.Write("{0}", MyRandomNumber.Generate(MinValue, MaxValue) + "\t");
+				Con.WriteLine("{0}", MyRandomNumber.Generate(MinValue, MaxValue));
+			}
+		} // private void Signed_BYTE_Loop
+	} // partial class Integer_Testing
 } // namespace RNG_Test

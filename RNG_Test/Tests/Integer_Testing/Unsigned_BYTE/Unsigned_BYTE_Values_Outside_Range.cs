@@ -12,7 +12,7 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
 		private void Unsigned_BYTE_Values_Outside_Range()
 		/*
@@ -77,5 +77,5 @@ namespace RNG_Test
 				Con.WriteLine("{0}", MyRandomNumber.Generate(Bad_MinValue, Bad_MaxValue));
 			}
 		} // private void Unsigned_BYTE_Values_Outside_Range
-	} // partial class BYTE_Testing
+	} // partial class Integer_Testing
 } // namespace RNG_Test

@@ -43,8 +43,8 @@ namespace RNG_Test
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  1 => Test Boolean");
-				Con.WriteLine(@"  2 => Test BYTE");
-				Con.WriteLine(@"  3 => Test Integer");
+				//Con.WriteLine(@"  2 => Test BYTE");
+				Con.WriteLine(@"  2 => Test Integer");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit the this menu");
 				Con.WriteLine(@"");
@@ -60,13 +60,8 @@ namespace RNG_Test
 						Boolean_Menu();
 						break;
 
-					// BYTES
+					// Integers
 					case '2':
-						BYTE_Menu();
-						break;
-
-					// BYTES
-					case '3':
 						Integer_Menu();
 						break;
 

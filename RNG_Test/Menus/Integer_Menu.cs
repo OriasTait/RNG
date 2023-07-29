@@ -41,10 +41,14 @@ namespace RNG_Test
 				Con.Clear();
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
-				Con.WriteLine(@"  1 => Signed 16-bit integer   (datatype: short)");
-				Con.WriteLine(@"  2 => Unsigned 16-bit integer (datatype: ushort)");
-				Con.WriteLine(@"  3 => Signed 32-bit integer   (datatype: int)");
-				Con.WriteLine(@"  4 => Unsigned 32-bit integer (datatype: uint)");
+				Con.WriteLine(@"  1 => Signed 8-bit integer    (datatype: sbyte)");
+				Con.WriteLine(@"  2 => Unsigned 8-bit integer  (datatype: byte)");
+				Con.WriteLine(@"");
+				Con.WriteLine(@"  3 => Signed 16-bit integer   (datatype: short)");
+				Con.WriteLine(@"  4 => Unsigned 16-bit integer (datatype: ushort)");
+				Con.WriteLine(@"");
+				Con.WriteLine(@"  5 => Signed 32-bit integer   (datatype: int)");
+				Con.WriteLine(@"  6 => Unsigned 32-bit integer (datatype: uint)");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit this menu");
 				Con.WriteLine(@"");
@@ -54,23 +58,33 @@ namespace RNG_Test
 				// Check the key that was pressed
 				switch (Key_Pressed)
 				{
-					// Signed Short
+					// Signed Byte
 					case '1':
+						Integer_Test.Signed_BYTE();
+						break;
+
+					// Unsigned Byte
+					case '2':
+						Integer_Test.Unsigned_BYTE();
+						break;
+
+					// Signed Short
+					case '3':
 						Integer_Test.Signed_Short();
 						break;
 
 					// Unsigned Short
-					case '2':
+					case '4':
 						Integer_Test.Unsigned_Short();
 						break;
 
 					// Signed Integer
-					case '3':
+					case '5':
 						Integer_Test.Signed_Integer();
 						break;
 
 					// Unsigned Integer
-					case '4':
+					case '6':
 						Integer_Test.Unsigned_Integer();
 						break;
 

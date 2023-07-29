@@ -11,7 +11,7 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
 		public void Signed_BYTE()
 		/*
@@ -75,6 +75,6 @@ namespace RNG_Test
 			Con.WriteLine();
 			Con.WriteLine(@"Press any key to continue...");
 			_ = Con.ReadKey().KeyChar;
-		} // public void Signed_BYTE
+		} // public void Integer_Testing
 	} // partial class BYTE_Testing
 } // namespace RNG_Test

@@ -12,18 +12,18 @@ using Con = System.Console;
 
 namespace RNG_Test
 {
-	partial class BYTE_Testing
+	partial class Integer_Testing
 	{
 		[System.Diagnostics.CodeAnalysis.SuppressMessage("Major Code Smell", "S2234:Arguments should be passed in the same order as the method parameters", Justification = "<Pending>")]
-		private void Signed_BYTE_Incorect_Order()
+		private void Unsigned_BYTE_Incorect_Order()
 		/*
 		===============================================================================================
 		PURPOSE:
-		Test the Random Number Generator for a Signed BYTE when the parameters are provided in the
+		Test the Random Number Generator for an Unsigned BYTE when the parameters are provided in the
 		incorrect order => Maximum value, Minimum value
 		-----------------------------------------------------------------------------------------------
 		OUTPUT:
-		Randomly generated Signed BYTE values.
+		Randomly generated Unsigned BYTE values.
 		===============================================================================================
 		*/
 		{
@@ -31,8 +31,8 @@ namespace RNG_Test
 			// Variables - Standard
 			//=============
 			RNG MyRandomNumber = new RNG();
-			sbyte MinValue = sbyte.MinValue;
-			sbyte MaxValue = sbyte.MaxValue;
+			byte MinValue = byte.MinValue;
+			byte MaxValue = byte.MaxValue;
 
 			//=============
 			// Body
@@ -44,6 +44,6 @@ namespace RNG_Test
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
 			Con.Write("{0}", MyRandomNumber.Generate(MaxValue, MinValue) + "\t");
 			Con.WriteLine("{0}", MyRandomNumber.Generate(MaxValue, MinValue));
-		} // private void Signed_BYTE_Incorect_Order
-	} // partial class BYTE_Testing
+		} // private void Unsigned_BYTE_Incorect_Order
+	} // partial class Integer_Testing
 } // namespace RNG_Test
