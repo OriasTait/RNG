@@ -1,6 +1,6 @@
 # RNG
 This is the Random Number Generator (RNG) that is used within my applications.  It is a collection of different methods
-of generating a random number. Everytime a number is generated, it will randomly select which of these methods are used;
+of generating a random number. Every time a number is generated, it will randomly select which of these methods are used;
 and then generate the random number using the selected method.
 
 The following methods are in use:
@@ -46,10 +46,10 @@ NOTES:
 - As of .NET 6, this has become obsolete.  Microsoft suggests using the class RandomNumberGenerator.
 
 ### Pros
-- The output is cryptographically strong random values.
+- The output is crypto-graphically strong random values.
 
 ### Cons
-- The random generator only generates bytes, so the different data types need to be built to accomidate how the
+- The random generator only generates bytes, so the different data types need to be built to accommodate how the
   data is stored.  For example, to generate a random integer, an array of 4 bytes need to be used instead of 1.
 
 - Additional functionality needs to be created to handle a fairly generated number.  A fair selection is considered
@@ -78,10 +78,10 @@ NOTES:
   Cryptography used is stronger; and has better handling on more platforms.
 
 ### Pros
-- The output is cryptographically strong random values.
+- The output is crypto graphically strong random values.
 
 ### Cons
-- The random generator only generates bytes, so the different data types need to be built to accomidate how the
+- The random generator only generates bytes, so the different data types need to be built to accommodate how the
   data is stored.  For example, to generate a random integer, an array of 4 bytes need to be used instead of 1.
 
 - Additional functionality needs to be created to handle a fairly generated number.  A fair selection is considered
