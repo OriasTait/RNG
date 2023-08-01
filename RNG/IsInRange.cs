@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -41,4 +41,4 @@ namespace MyRNG
             return Results;
         } // private bool IsInRange(long MinValue, long MaxValue, long LongRand)
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

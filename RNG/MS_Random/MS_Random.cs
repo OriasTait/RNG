@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 //=============
 using App = System.Threading.Thread;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -40,44 +40,38 @@ namespace MyRNG
             // Variables - Random Number Generation
             //=============
             byte[] Buffer = new byte[8];                    // Long data types => 8 bytes
-            long LongRand;                                  // The long number that is randomly generated
             long Offset = MinValue;                         // Offset from 0
             long Selections = (MaxValue - MinValue) + 1;    // The number of selections possible
-            bool ValidNumber = false;                       // Assume the number is not valid
 
             //=============
             // Setup Environment
             //=============
-            bool Positive = false;  // Is the Min and Max values both positive?
-
-            // Check if all values are expected to be positive
-            if (MinValue >= 0)
-            { Positive = true; }
+            Valid_Number = false;   // Start by assuming the number is not valid
 
             //=============
             // Body
             //=============
-            // Generate an long
+            // Generate a long
             do
             {
                 // Fill the array with a random value.
                 RandomNumber.NextBytes(Buffer);
 
                 // Convert to a long number
-                LongRand = (long)BitConverter.ToInt64(Buffer, 0);
+                Long_Rand = BitConverter.ToInt64(Buffer, 0);
 
                 // Assign the results based on the random number
-                Results = (LongRand % Selections) + Offset;
+                Results = (Long_Rand % Selections) + Offset;
 
                 // If all values are expected to be positive, take the absolute value of the generated number
-                if (Positive)
+                if (Positive_Only)
 				{ Results = Math.Abs(Results); }
 
                 // Check if it is fair and within the range
-                if ((IsFair(LongRand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
-                { ValidNumber = true; }
+                if ((IsFair(Long_Rand, Selections)) && (IsInRange(MinValue, MaxValue, Results)))
+                { Valid_Number = true; }
             }
-            while (!ValidNumber);
+            while (!Valid_Number);
 
             //=============
             // Cleanup Environment
@@ -89,4 +83,4 @@ namespace MyRNG
             return Results;
         } // private long MS_Random(long MinValue, long MaxValue)
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

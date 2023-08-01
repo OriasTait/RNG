@@ -5,7 +5,7 @@ using System.Security.Cryptography;  // for RNGCryptoServiceProvider
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -37,8 +37,8 @@ namespace MyRNG
             //=============
             // Body
             //=============
-            // Use the MS_RNG_CSP method to randomly choose the method to use
-            Results = int.Parse(MS_RNG_CSP(0, RNGCount).ToString());
+            // Use the MS_RNG_RNG method to randomly choose the method to use
+            Results = int.Parse(MS_RNG_RNG(0, RNGCount).ToString());
 
             //=============
             // Cleanup Environment
@@ -46,4 +46,4 @@ namespace MyRNG
             return Results;
         } // private int Choose_Process()
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG

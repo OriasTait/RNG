@@ -43,11 +43,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menus\Boolean_Menu.cs" />
+    <Compile Include="Menus\Integer_Menu.cs" />
+    <Compile Include="Menus\Main_Menu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Correct_Order.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Incorrect_Order.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Same_Value.cs" />
+    <Compile Include="Tests\Boolean_Testing\Boolean_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_BYTE\Signed_BYTE_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_BYTE\Unsigned_BYTE.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Integer\Signed_Integer.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Signed_Short\Signed_Short.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsgned_Short\Unsigned_Short.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Loop.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Values_Outside_Range.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Negative_Values.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Same_Value.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Incorrect_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Correct_Order.cs" />
+    <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
+    <None Include="ChangeLog.md" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -56,5 +110,6 @@
       <Name>RNG</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

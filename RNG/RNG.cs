@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
-    {
+	{
         /*
         ===============================================================================================
         PURPOSE:
@@ -19,11 +20,23 @@ namespace MyRNG
           the same type.
         ===============================================================================================
         */
+        //=============
+        // Enumerations
+        //=============
         private enum RNGTypes 
         {
             Class_Random,   // Microsoft Class Random
             Class_RNG_CSP,  // Microsoft RNGCryptoServiceProvider Class
+            Class_RNG_RNG,  // Microsoft RandomNumberGenerator Class
             END             // End of the selections
         }
+
+        //=============
+        // Private Fields
+        //=============
+        private long Generated_Number;      // The results of the Random Number Generation
+        private long Long_Rand;             // The long number that is randomly generated
+        private bool Positive_Only = false; // Flag indicating the results contain only positive values
+        private bool Valid_Number = false;  // Flag to indicate if the results are valid
     } // public class RNG
-}
+} // Orias_RNG

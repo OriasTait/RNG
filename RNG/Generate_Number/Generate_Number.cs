@@ -5,7 +5,7 @@ using System.Security.Cryptography;  // for RNGCryptoServiceProvider
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyRNG
+namespace Orias_RNG
 {
     public partial class RNG
     {
@@ -36,15 +36,18 @@ namespace MyRNG
             // Setup Environment
             //=============
             Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
+            
+            // Check if all values are expected to be positive
+            Positive_Only = (MinValue >= 0);
 
-			//=============
-			// Body
-			//=============
-			// Choose a process
-			int RNGProcess = Choose_Process();
+            //=============
+            // Body
+            //=============
+            // Choose a process
+            int RNGProcess = Choose_Process();
 
             // Use the chosen method
-			switch (RNGProcess)
+            switch (RNGProcess)
 			{
 				case (int)RNGTypes.Class_Random:
 					Results = MS_Random(MinValue, MaxValue);
@@ -53,12 +56,16 @@ namespace MyRNG
 				case (int)RNGTypes.Class_RNG_CSP:
 					Results = MS_RNG_CSP(MinValue, MaxValue);
 					break;
+
+				case (int)RNGTypes.Class_RNG_RNG:
+					Results = MS_RNG_RNG(MinValue, MaxValue);
+					break;
 			}
 
-			//=============
-			// Cleanup Environment
-			//=============
-			return Results;
+            //=============
+            // Cleanup Environment
+            //=============
+            return Results;
         } // private int Generate_Number()
     } // public class RNG
-} // namespace MyRNG
+} // namespace Orias_RNG
