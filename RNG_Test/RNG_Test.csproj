@@ -102,7 +102,6 @@
     </None>
     <None Include="App.config" />
     <None Include="ChangeLog.md" />
-    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RNG\RNG.csproj">
