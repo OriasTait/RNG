@@ -43,9 +43,9 @@ namespace RNG_Test
 				Con.WriteLine(@"Select an option:");
 				Con.WriteLine(@"");
 				Con.WriteLine(@"  1 => Test Boolean");
-				//Con.WriteLine(@"  2 => Test BYTE");
 				Con.WriteLine(@"  2 => Test Integer");
-				Con.WriteLine(@"");
+                Con.WriteLine(@"  3 => Test Percentage");
+                Con.WriteLine(@"");
 				Con.WriteLine(@"  X => Exit the this menu");
 				Con.WriteLine(@"");
 				Con.Write(@"Press any key to continue...");
@@ -65,8 +65,13 @@ namespace RNG_Test
 						Integer_Menu();
 						break;
 
-					// Exit the Main loop
-					case 'x':
+                    // Percentages
+                    case '3':
+                        Percentage_Menu();
+                        break;
+
+                    // Exit the Main loop
+                    case 'x':
 					case 'X':
 						break;
 				}

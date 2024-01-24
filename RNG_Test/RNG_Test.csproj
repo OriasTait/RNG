@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menus\Boolean_Menu.cs" />
+    <Compile Include="Menus\Percentage_Menu.cs" />
     <Compile Include="Menus\Integer_Menu.cs" />
     <Compile Include="Menus\Main_Menu.cs" />
     <Compile Include="Program.cs" />
@@ -95,6 +96,8 @@
     <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Incorrect_Order.cs" />
     <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer_Correct_Order.cs" />
     <Compile Include="Tests\Integer_Testing\Unsigned_Integer\Unsigned_Integer.cs" />
+    <Compile Include="Tests\Percentage_Testing\Percentage_Incorrect_Order.cs" />
+    <Compile Include="Tests\Percentage_Testing\Percentage_Testing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\.editorconfig">

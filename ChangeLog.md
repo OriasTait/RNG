@@ -10,6 +10,14 @@
   - Integer, Unsigned
   - Short, Signed
   - Short, Unsigned
+- New Data Types
+  - Long, Unsigned
+  - RNG_Status
+- New Generation Type
+  - Percentage
+- New Fields
+  - Status
+  - RNG_Message
 - Bug Fixes
 - Expanded Test cases
 - Processing Optimization
