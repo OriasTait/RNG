@@ -34,7 +34,6 @@ namespace RNG_Test
             decimal MinValue = 0M;
             decimal MaxValue = 100M;
             byte Precision = 18;
-            decimal Results = 0;
 
             //=============
             // Setup Environment
@@ -46,7 +45,7 @@ namespace RNG_Test
             // Body
             //=============
             // Generate the first percentage
-            Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
+            decimal Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
             if (MyRandomNumber.Status == RNG.RNG_Status.Success)
             {
                 Con.Write("{0}", Results + "\t");

@@ -40,14 +40,14 @@ namespace Orias_RNG
             //=============
             // Setup Environment
             //=============
-            // Verify the given information
-            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
+            // Indicate all values will be positive
+            Positive_Only = true;
 
-            /*
-            Verify Max Value
-            Verify Min Value
-             */
-            Verify_Precision_Value(Precision);
+            // Verify the given information
+            if (Status == RNG_Status.Success) { Verify_MaxMin_Parameters(ref MinValue, ref MaxValue); }
+            if (Status == RNG_Status.Success) { Verify_Min_Value(MinValue); }
+            if (Status == RNG_Status.Success) { Verify_Max_Value(MaxValue); }
+            if (Status == RNG_Status.Success) { Verify_Precision_Value(Precision); }
 
             /*
             //=============
@@ -61,14 +61,6 @@ namespace Orias_RNG
             // Precision range
             long Precision_Min = 0;
             long Precision_Max = 999999999999999999;  // 18 digits
-
-            //=============
-            // Setup Environment
-            //=============
-            Verify_MaxMin_Parameters(ref Min_Value, ref Max_Value);
-
-            // Indicate all values will be positive
-            Positive_Only = true;
 
             //=============
             // Body
