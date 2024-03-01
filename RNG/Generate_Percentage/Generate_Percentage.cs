@@ -18,65 +18,141 @@ namespace Orias_RNG
         PARAMETERS:
         - MinValue  => The minimum Whole Number to return
         - MaxValue  => The maximum Whole Number to return
-        - Precision => How many decimal digits to return
+        - Precision => How many total digits to return, including decimal
         -----------------------------------------------------------------------------------------------
         OUTPUT:
         - A randomly generated decimal.
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - A percentage data type is broken into 2 parts:
-          - Whole Number    => The digits to the left of the decimal
-          - Percision       => The digits to the right of the decimal
-
         - All values will be positive
+
+        - If the value does not have a whole number, C# will add a zero (0).
+        -----------------------------------------------------------------------------------------------
+        - A percentage data type is broken into 2 parts:
+          - Whole Number    => The digits to the left of the decimal point
+          - Decimal         => The digits to the right of the decimal point
         ===============================================================================================
         */
         {
             //=============
             // Variables - Standard
             //=============
-            decimal Results = 0;
+            decimal Results = 0M;
+             string ResultsStr = string.Empty;
+            string MinValueStr = string.Empty;
+            string MaxValueStr = string.Empty;
+            int Decmal_Location = -1;
+
+            //=============
+            // Variables - Decimal Parts
+            //=============
+            int MinValueStrDecmal = 0;
+            int MaxValueStrDecmal = 0;
 
             //=============
             // Setup Environment
             //=============
-            // Indicate all values will be positive
-            Positive_Only = true;
-
             // Verify the given information
             if (Status == RNG_Status.Success) { Verify_MaxMin_Parameters(ref MinValue, ref MaxValue); }
-            if (Status == RNG_Status.Success) { Verify_Min_Value(MinValue); }
-            if (Status == RNG_Status.Success) { Verify_Max_Value(MaxValue); }
+            if (Status == RNG_Status.Success) { Verify_Percentage_Min_Value(MinValue); }
+            if (Status == RNG_Status.Success) { Verify_Percentage_Max_Value(MaxValue); }
             if (Status == RNG_Status.Success) { Verify_Precision_Value(Precision); }
 
-            /*
-            //=============
-            // Variables - Standard
-            //=============
-            uint Whole_Number = 0;
-            ulong Precision = 0;
-            long Min_Value = MinValue;
-            long Max_Value = MaxValue;
+            // Prepare the numbers for generation
+            if (Status == RNG_Status.Success)
+            {
+                // Convert to string
+                MinValueStr = MinValue.ToString();
+                MaxValueStr = MaxValue.ToString();
 
-            // Precision range
-            long Precision_Min = 0;
-            long Precision_Max = 999999999999999999;  // 18 digits
+                //=============
+                // Make the strings the same size
+                //=============
+                // Ensure each value has a decimal point
+                MinValueStrDecmal = MinValueStr.IndexOf(".");
+                if (MinValueStrDecmal < 0) 
+                { 
+                    MinValueStr = MinValueStr.Insert(MinValueStr.Length, ".");
+                    MinValueStrDecmal = MinValueStr.IndexOf(".");
+                }
 
-            //=============
-            // Body
-            //=============
-            // Generate the Whole Number
-            Whole_Number = Generate(MinValue, MaxValue);
+                MaxValueStrDecmal = MaxValueStr.IndexOf(".");
+                if (MaxValueStrDecmal < 0)
+                {
+                    MaxValueStr = MaxValueStr.Insert(MaxValueStr.Length, ".");
+                    MaxValueStrDecmal = MaxValueStr.IndexOf(".");
+                }
 
-            // Generate the Precision
-            Precision = Generate(Precision_Min, Precision_Max);
+                // If both have decimals in the same place
+                if (MinValueStrDecmal == MaxValueStrDecmal)
+                {
+                    // Whole number values will be the same, so no padding required
+                    MinValueStr = MinValueStr.PadRight(Precision, '0');
+                    MaxValueStr = MaxValueStr.PadRight(Precision, '0');
 
-            // Create the Percentage
-            Results = decimal.Parse(Whole_Number.ToString() + "." + Precision.ToString());
+                    // Save the decmal location
+                    Decmal_Location = MaxValueStrDecmal;
+                }
 
-            // Ensure the maximum has not been exceeded
-            if (Results > 100) { Results = decimal.Parse("100.000000000000000000"); }
-             */
+                // else decimals are in different locations
+                else
+                {
+                    // Place to hold the decimal location
+                    int The_Decimal = 0;
+
+                    // Calculate the differences between the decimal places
+                    The_Decimal = MaxValueStrDecmal - MinValueStrDecmal;
+
+                    // Left Pad the min value with zeros
+                    MinValueStr = MinValueStr.PadLeft(MinValueStr.Length + The_Decimal, '0');
+
+                    // Decimals are in the same location, right pad to precision
+                    MinValueStr = MinValueStr.PadRight(Precision, '0');
+                    MaxValueStr = MaxValueStr.PadRight(Precision, '0');
+
+                    // Save the decmal location
+                    Decmal_Location = MaxValueStrDecmal;
+                }
+
+                // Ensure Precision
+                if (Precision > 0)
+                {
+                    if (MinValueStr.Length > Precision) { MinValueStr = MinValueStr.Substring(0, Precision); }
+                    if (MaxValueStr.Length > Precision) { MaxValueStr = MaxValueStr.Substring(0, Precision); }
+                }
+
+                // Remove Decimal
+                MinValueStr = MinValueStr.Replace(".", string.Empty);
+                MaxValueStr = MaxValueStr.Replace(".", string.Empty);
+            }
+
+            // Generate the number
+            if (Status == RNG_Status.Success)
+            {
+                long MinValue_long = long.Parse(MinValueStr);
+                long MaxValue_long = long.Parse(MaxValueStr);
+
+                Results = Generate(MinValue_long, MaxValue_long);
+            }
+
+            // Prepare Results to be returned
+            if (Status == RNG_Status.Success)
+            {
+                // Convert Results to a string
+                ResultsStr = Results.ToString();
+
+                if (Precision > 0)
+                {
+                    // Left pad the results with 0
+                    ResultsStr = ResultsStr.PadLeft(Precision - 1, '0');
+
+                    // Replace the Decimal Point
+                    ResultsStr = ResultsStr.Insert(Decmal_Location, ".");
+                }
+
+                // Save the results
+                Results = decimal.Parse(ResultsStr);
+            }
 
             //=============
             // Cleanup Environment

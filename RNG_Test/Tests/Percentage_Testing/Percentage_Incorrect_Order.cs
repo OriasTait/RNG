@@ -31,9 +31,10 @@ namespace RNG_Test
             // Variables - Standard
             //=============
             RNG MyRandomNumber = new RNG();
-            decimal MinValue = 0M;
-            decimal MaxValue = 100M;
+            decimal MinValue = 100M;
+            decimal MaxValue = 0M;
             byte Precision = 18;
+            decimal Results;
 
             //=============
             // Setup Environment
@@ -44,64 +45,28 @@ namespace RNG_Test
             //=============
             // Body
             //=============
-            // Generate the first percentage
-            decimal Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
-            if (MyRandomNumber.Status == RNG.RNG_Status.Success)
+            for (int i = 0; i < 5; i++)
             {
-                Con.Write("{0}", Results + "\t");
-            }
-            else
-            {
-                Con.WriteLine();
-                Con.WriteLine(MyRandomNumber.RNG_Message);
-            }
+                // Generate the percentage
+                Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
 
-            // Generate the second percentage
-            Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
-            if (MyRandomNumber.Status == RNG.RNG_Status.Success)
-            {
-                Con.Write("{0}", Results + "\t");
-            }
-            else
-            {
-                Con.WriteLine();
-                Con.WriteLine(MyRandomNumber.RNG_Message);
-            }
-
-            // Generate the third percentage
-            Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
-            if (MyRandomNumber.Status == RNG.RNG_Status.Success)
-            {
-                Con.Write("{0}", Results + "\t");
-            }
-            else
-            {
-                Con.WriteLine();
-                Con.WriteLine(MyRandomNumber.RNG_Message);
-            }
-
-            // Generate the fourth percentage
-            Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
-            if (MyRandomNumber.Status == RNG.RNG_Status.Success)
-            {
-                Con.Write("{0}", Results + "\t");
-            }
-            else
-            {
-                Con.WriteLine();
-                Con.WriteLine(MyRandomNumber.RNG_Message);
-            }
-
-            // Generate the fifth percentage
-            Results = MyRandomNumber.Generate_Percentage(MaxValue, MinValue, Precision);
-            if (MyRandomNumber.Status == RNG.RNG_Status.Success)
-            {
-                Con.WriteLine("{0}", Results + "\t");
-            }
-            else
-            {
-                Con.WriteLine();
-                Con.WriteLine(MyRandomNumber.RNG_Message);
+                // Validate the results
+                if (MyRandomNumber.Status == RNG.RNG_Status.Success)
+                {
+                    if (i < 4)
+                    {
+                        Con.Write("{0}", Results + "\t");
+                    }
+                    else
+                    {
+                        Con.WriteLine("{0}", Results + "\t");
+                    }
+                }
+                else
+                {
+                    Con.WriteLine();
+                    Con.WriteLine(MyRandomNumber.RNG_Message);
+                }
             }
         } // Percentage_Incorrect_Order()
     } // partial class Percentage_Testing

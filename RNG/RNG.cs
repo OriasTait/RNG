@@ -21,6 +21,13 @@ namespace Orias_RNG
         ===============================================================================================
         */
         //=============
+        // Constants
+        //=============
+        private const byte Percentage_Max_Length = 18;  // Maximum string length of a percentage value
+        private const byte Percentage_Min_Value = 0;
+        private const byte Percentage_Max_Value = 100;
+
+        //=============
         // Enumerations
         //=============
         private enum RNGTypes 

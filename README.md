@@ -27,8 +27,8 @@ The following C# data types are able to be randomly generated:
 - ulongSystem.UInt64	=> Unsigned 64-bit integer (Range: 0 to 999,999,999,999,999,999)
 
 The following data generation types were created:
-- Percentage	=> A decimal/System.Decimal number with a percision of 18 digits
-  (Range: 0.000000000000000000 to 100.000000000000000000)
+- Percentage	=> A decimal/System.Decimal number represented with a total of 18 characters (17 digits and 1 decimal)
+  (Range: 0.0000000000000000 to 100.00000000000000)
 
 ## Microsoft Random Class
 The Microsoft Random Class is based on a modified version of Donald E. Knuth's subtractive random number generator

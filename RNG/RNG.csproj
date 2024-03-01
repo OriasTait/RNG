@@ -43,8 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generate_Number\Generate_Number.cs" />
-    <Compile Include="Generate_Percentage\Verify_Max_Value.cs" />
-    <Compile Include="Generate_Percentage\Verify_Min_Value.cs" />
+    <Compile Include="Generate_Percentage\Verify_Percentage_Max_Value.cs" />
+    <Compile Include="Generate_Percentage\Verify_Percentage_Min_Value.cs" />
     <Compile Include="Generate_Percentage\Verify_Precision_Value.cs" />
     <Compile Include="Generate_Percentage\Generate_Percentage.cs" />
     <Compile Include="IsInRange.cs" />

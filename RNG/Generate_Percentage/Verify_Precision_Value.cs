@@ -27,10 +27,12 @@ namespace Orias_RNG
             //=============
             // Body
             //=============
-            if ((Precision < 0) || (Precision > 18))
+            if ((Precision < 0) || (Precision > Percentage_Max_Length))
             {
                 Status = RNG_Status.Failure;
-                RNG_Message = "Precision must be a value 0 to 18. The given value " + Precision + " is outside this range.";
+                RNG_Message =
+                    "Precision must be a value 0 to " + Percentage_Max_Length 
+                    + ". The given value " + Precision + " is outside this range.";
             }
             else
             {
