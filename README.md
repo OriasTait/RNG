@@ -13,10 +13,10 @@ At the core, the random number generated is of type long. This provides a maximu
 converting to the long data type, generating the number, then converting back to the original data type.
 
 NOTES:
-- Due to the base generation being of type long, the ability to randomly generate long/System.Int64 and
+- Due to the base generation being of type long, the ability to randomly generate the full selections of long/System.Int64 and
   ulong/System.UInt64 data types is not possible.
 
-The following data types are able to be randomly generated:
+The following C# data types are able to be randomly generated:
 - bool/System.Boolean	=> Structured data type that can only be "true" or "false"
 - byte/System.Byte		=> Unsigned 8-bit integer  (Range: 0 to 255)
 - sbyte/System.SByte	=> Signed 8-bit integer    (Range: -128 to 127)
@@ -24,6 +24,11 @@ The following data types are able to be randomly generated:
 - ushort/System.Int16	=> Unsigned 16-bit integer (Range: 0 to 65,535)
 - int/System.Int32		=> Signed 32-bit integer   (Range: -2,147,483,648 to 2,147,483,647)
 - uint/System.Int32		=> Unsigned 32-bit integer (Range: 0 to 4,294,967,295)
+- ulongSystem.UInt64	=> Unsigned 64-bit integer (Range: 0 to 999,999,999,999,999,999)
+
+The following data generation types were created:
+- Percentage	=> A decimal/System.Decimal number represented with a total of 18 characters (17 digits and 1 decimal)
+  (Range: 0.0000000000000000 to 100.00000000000000)
 
 ## Microsoft Random Class
 The Microsoft Random Class is based on a modified version of Donald E. Knuth's subtractive random number generator

@@ -21,6 +21,13 @@ namespace Orias_RNG
         ===============================================================================================
         */
         //=============
+        // Constants
+        //=============
+        private const byte Percentage_Max_Length = 18;  // Maximum string length of a percentage value
+        private const byte Percentage_Min_Value = 0;
+        private const byte Percentage_Max_Value = 100;
+
+        //=============
         // Enumerations
         //=============
         private enum RNGTypes 
@@ -31,6 +38,12 @@ namespace Orias_RNG
             END             // End of the selections
         }
 
+        public enum RNG_Status
+        {
+            Success,    // The RNG was successfully generated
+            Failure     // The RNG could not be generated
+        }
+
         //=============
         // Private Fields
         //=============
@@ -38,5 +51,41 @@ namespace Orias_RNG
         private long Long_Rand;             // The long number that is randomly generated
         private bool Positive_Only = false; // Flag indicating the results contain only positive values
         private bool Valid_Number = false;  // Flag to indicate if the results are valid
+
+        //=============
+        // Public Attribute Methods
+        //=============
+        public RNG_Status Status  { get; set; }
+        public string RNG_Message { get; set; }
+
+        //=============
+        // Constructor
+        //=============
+        public RNG()
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Ensure the class is in a known state upon creation.
+        ===============================================================================================
+        */
+        {
+            Status = RNG_Status.Success;
+            RNG_Message = RNG_Status.Success.ToString();
+        } // public RNG
+
+        //=============
+        // Destructor
+        //=============
+        ~RNG()
+        /*
+        ===============================================================================================
+        PURPOSE:
+        Ensure the class is removed efficiently
+        ===============================================================================================
+        */
+        {
+            // Ensure the message is empty
+            RNG_Message = string.Empty;
+        } // public RNG
     } // public class RNG
 } // Orias_RNG

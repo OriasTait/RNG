@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -42,14 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Generate_Number\Generate_Number.cs" />
+    <Compile Include="Generate_Percentage\Verify_Percentage_Max_Value.cs" />
+    <Compile Include="Generate_Percentage\Verify_Percentage_Min_Value.cs" />
+    <Compile Include="Generate_Percentage\Verify_Precision_Value.cs" />
+    <Compile Include="Generate_Percentage\Generate_Percentage.cs" />
     <Compile Include="IsInRange.cs" />
     <Compile Include="IsFair.cs" />
     <Compile Include="MS_RNG_CSP\MS_RNG_CSP.cs" />
     <Compile Include="MS_Random\MS_Random.cs" />
     <Compile Include="Generate_Number\Choose_Process.cs" />
-    <Compile Include="Generate.cs" />
+    <Compile Include="Generate\Generate.cs" />
     <Compile Include="MS_RNG_RNG\MS_RNG_RNG.cs" />
-    <Compile Include="Verify_MaxMin_Parameters.cs" />
+    <Compile Include="Verify_MaxMin_Parameters\Verify_MaxMin_Parameters.cs" />
     <Compile Include="RNG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

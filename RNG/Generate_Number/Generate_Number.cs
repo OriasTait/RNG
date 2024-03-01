@@ -53,19 +53,19 @@ namespace Orias_RNG
 					Results = MS_Random(MinValue, MaxValue);
 					break;
 
-				case (int)RNGTypes.Class_RNG_CSP:
-					Results = MS_RNG_CSP(MinValue, MaxValue);
-					break;
+                case (int)RNGTypes.Class_RNG_CSP:
+                    Results = MS_RNG_CSP(MinValue, MaxValue);
+                    break;
 
-				case (int)RNGTypes.Class_RNG_RNG:
-					Results = MS_RNG_RNG(MinValue, MaxValue);
-					break;
-			}
+                case (int)RNGTypes.Class_RNG_RNG:
+                    Results = MS_RNG_RNG(MinValue, MaxValue);
+                    break;
+            }
 
             //=============
             // Cleanup Environment
             //=============
             return Results;
         } // private int Generate_Number()
-    } // public class RNG
+    } // namespace Orias_RNG
 } // namespace Orias_RNG

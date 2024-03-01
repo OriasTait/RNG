@@ -232,7 +232,7 @@ namespace Orias_RNG
             return Results;
         } // public ushort Generate(ushort MinValue, ushort MaxValue)
 
-        public long Generate(long MinValue, long MaxValue)
+        public ulong Generate(long MinValue, long MaxValue)
         /*
         ===============================================================================================
         PURPOSE:
@@ -244,7 +244,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for Long
+        - This method is for unsigned short
         ===============================================================================================
         */
         {
@@ -255,12 +255,13 @@ namespace Orias_RNG
             Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Integer
-            long Results = int.Parse(Generated_Number.ToString());
+            ulong Results = ulong.Parse(Generated_Number.ToString());
 
             //=============
             // Cleanup Environment
             //=============
             return Results;
-        } // public int Generate(long MinValue, long MaxValue)
+        } // public ushort Generate(ulong MinValue, ulong MaxValue)
+
     } // public class RNG
 } // namespace Orias_RNG

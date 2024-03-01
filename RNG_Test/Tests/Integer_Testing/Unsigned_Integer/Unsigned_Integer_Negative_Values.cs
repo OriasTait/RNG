@@ -14,6 +14,8 @@ namespace RNG_Test
 {
 	partial class Integer_Testing
 	{
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S1481:Unused local variables should be removed", Justification = "<Pending>")]
+		[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0059:Unnecessary assignment of a value", Justification = "<Pending>")]
 		private void Unsigned_Integer_Negative_Values()
 		/*
 		===============================================================================================
@@ -70,11 +72,8 @@ namespace RNG_Test
 
 			if (IsValid)
 			{
-				Con.Write("{0}", MyRandomNumber.Generate(Bad_MinValue, MaxValue) + "\t");
-				Con.Write("{0}", MyRandomNumber.Generate(MinValue, Bad_MaxValue) + "\t");
-				Con.Write("{0}", MyRandomNumber.Generate(Bad_MinValue, MaxValue) + "\t");
-				Con.Write("{0}", MyRandomNumber.Generate(MinValue, Bad_MaxValue) + "\t");
-				Con.WriteLine("{0}", MyRandomNumber.Generate(Bad_MinValue, Bad_MaxValue));
+				Con.WriteLine("Something is wrong with the validation.");
+				Con.WriteLine("Values greater than {0} or less than {1} are not allowed.", MaxValue, MinValue);
 			}
 		} // private void Unsigned_Integer_Negative_Values
 	} // partial class Integer_Testing
