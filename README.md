@@ -106,5 +106,4 @@ available.
 =============
 
 # How to compile
-This was created in Microsoft Visual Studio Community 2019.  Open the file SQLiteAPI.sln in Visual Studio and compile
-the project.
+This was created in Microsoft Visual Studio Community 2022.  Open the file RNG.sln in Visual Studio and compile the project.
