@@ -1,5 +1,8 @@
 # Change Log
 
+## Version 2.2.0
+- Updated to .NET 4.8
+
 ## Version 2.1.0
 - New Data Types
   - Long, Unsigned
