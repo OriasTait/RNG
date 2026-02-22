@@ -1,0 +1,5 @@
+Create UI for DLL project
+
+How to setup DLL project to
+1. Sync with Hel
+2. Sync with the UI/Test from project

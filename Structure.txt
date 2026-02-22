@@ -1,0 +1,51 @@
+/MyProduct
+├── MyProduct.sln                  ← canonical product solution
+├── README.md
+├── .gitignore
+
+└── Assemblies/                      ← All buildable code
+│   └── Core/                 ← Pure C# (no Unity refs)
+│   │   ├── MyProduct.Core.csproj
+│   │   └── ...
+│   │
+│   └── Infrastructure/       ← IO, network, persistence
+│   │   ├── MyProduct.Infrastructure.csproj
+│   │   └── ...
+│   │
+│   └── UIs/
+│   │   └── Console/
+│   │   │   ├── MyProduct.Console.csproj
+│   │   │   └── ...
+│   │
+│   │   └── WPF/
+│   │   │   ├── MyProduct.Wpf.csproj
+│   │   │   └── ...
+│   │
+│   │   └── Unity/                 ← optional; Unity project lives here
+│   │       └── Assets/
+│   │   │       └── Scripts/       ← Thin adapters only
+│   │   │       └── ...
+│   │       └── Packages/
+│   │       └── ProjectSettings/
+│   │       ├── UnityApp.sln
+│   │
+│   └── Tests/
+│       └── Core.Tests/
+│       └── Infrastructure.Tests/
+
+└── Builds/                    ← Deterministic outputs
+│   └── dll/
+│   └── unity/
+
+└── Solution_Information/           ← single source of truth
+│   ├── requirements.md
+│   ├── architecture.md
+│   ├── Change_Log.md
+│   ├── copilot-instructions.md
+│   ├── constraints.md
+│   ├── terminology.md
+│   ├── decisions.md           ← ADR-style, optional but powerful
+
+└── tools/                    ← Automation glue
+    ├── sync-dlls.ps1
+    ├── sync-dlls.sh
