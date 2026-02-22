@@ -1,0 +1,87 @@
+-------------------
+Development
+-------------------
+???? (TSIT01D03862)
+Data Source=TSIT01D03862;User ID=dba;Initial Catalog=DB_Admin;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;
+database
+
+ConfigDB
+Data Source=10.77.30.203;User ID=ssislog;Initial Catalog=SSISDB;Persist Security Info=True;Application Name=SSIS-Konami_Data_Pull;
+ssislog123
+
+EXCEL
+Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\Work\Code\MKT_Email MKT_Email\Solution_Information\OpenTableData\PeachBlossom.xls;Extended Properties="EXCEL 8.0;HDR=NO";
+
+FLATFILE
+Expression ConnectionString=@[$Project::FTP_LocalPath] + @[User::FileName]
+
+FTP
+Server: 172.31.0.51
+Port: 22
+ftpadmin:casino123!
+Directory: /exzrsvp/incoming/
+
+RSVP_MYSQL
+Host: turningstonerds.cevclqpgjbpn.us-east-1.rds.amazonaws.com
+Database: vipoffers
+uid=rsvpuser;Dsn=RSVP_MYSQL;
+SLidue3844P
+
+-------------------
+UAT
+-------------------
+ConfigDB
+Data Source=10.77.30.203;User ID=ssislog;Initial Catalog=SSISDB;Persist Security Info=True;Application Name=SSIS-Konami_Data_Pull;
+ssislog123
+
+SG_CMP_LAB
+Data Source=10.78.1.31;User ID=dba;Initial Catalog=BallyStaging;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=false;
+
+-------------------
+Production
+-------------------
+ConfigDB
+Data Source=RST-MSSQLBI-3;User ID=ssislog;Initial Catalog=SSISDB;Persist Security Info=True;Application Name=SSIS-SavonSales;
+22|NKZ)Mkc
+
+EDW2
+Data Source=RST-EDW-2;User ID=dba;Initial Catalog=SavonSales;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;
+Data Source=EDW2;User ID=dba;Initial Catalog=SavonSales;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;
+database
+
+PINNACLE
+Data Source=RAY-PINNACLE-SQL-1;User ID=dba;Initial Catalog=EPM_DW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;
+database
+
+RST-LOYSQLCLSTR
+Data Source=RST-LOYSQLCLSTR;User ID=dba;Initial Catalog=ONE_Loyalty;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;
+database
+
+SG_CMP
+Data Source=10.13.20.101;User ID=cmktuser;Initial Catalog=BallyStaging;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=false;
+kjhfec
+
+SG_CMP_REPLICA
+Data Source=10.13.20.114;User ID=cmktuser;Initial Catalog=BallyStaging;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=false;
+kjhfec
+
+SavOn (Konami)
+Data Source=SavOn;User ID=dbamon;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;
+dbamon123
+
+Synkros (Konami)
+Data Source=EMS;User ID=dbamon;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;
+dbamon123
+
+YBR (Konami)
+Data Source=YBR;User ID=dbamon;Provider=OraOLEDB.Oracle.1;Persist Security Info=True;
+dbamon123
+
+-------------------
+SSRS
+-------------------
+TargetReportFolder: In Testing
+TargetServerURL: http://rst-mssqlbi-3.one.oinny.com/reportserver
+
+TargetReportFolder: Finance/Period Point Rprts DDL
+TargetServerURL: http://rst-mssqlbi-3.one.oinny.com/reportserver

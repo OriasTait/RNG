@@ -1,0 +1,3 @@
+This directory holds the following
+- Links to 3rd party applications that assist in the development (Example: DBeaver)
+- Automation processes used to synchronize External objects with this solution (Example: Appropriate objects in Hel)

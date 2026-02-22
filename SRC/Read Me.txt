@@ -1,0 +1,5 @@
+This directory holds the following
+- All Buildable Code except for the User Interfaces (UIs).
+  For example, the projects for:
+  - Core/                 ← Pure C# (no Unity refs)
+  - Infrastructure/       ← IO, network, persistence

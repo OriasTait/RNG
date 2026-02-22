@@ -1,0 +1,5 @@
+Create appropriate projects to the solution
+
+Prompt:
+Follow all governing documents in this repository.
+Update this code to meet the requirements.

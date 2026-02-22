@@ -1,0 +1,18 @@
+This directory holds the following
+- Global Authority for AI Assistant documentation:
+  - architecture.md
+  - copilot-instructions.md
+  - glossary.md
+  - governance.md
+  - standards.md
+
+- For simpler solutions, the following can also be found here, instead of with each sub-solution.
+  - constraints.md
+  - requirements.md
+  - tasks.md
+These are included in the directory as a starting point.
+
+
+Not sure that this is for (yet), but also here.
+│   └── decisions/
+│   │   ├── ADR-001-structure.md (New Document, no Anchor)

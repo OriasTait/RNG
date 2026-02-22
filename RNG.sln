@@ -5,10 +5,12 @@ VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
-		Solution_Information\Change_Log.md = Solution_Information\Change_Log.md
+		Docs\Change_Log.md = Docs\Change_Log.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNG", "Assemblies\Core\RNG\RNG.csproj", "{BB1A1990-BC5F-4DBB-94D1-27A6DE9B7155}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNG", "SRC\RNG\RNG.csproj", "{BB1A1990-BC5F-4DBB-94D1-27A6DE9B7155}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RNG_Test", "Tests\RNG_Test\RNG_Test.csproj", "{7012711A-30AF-478A-BF69-FB23F072F586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{BB1A1990-BC5F-4DBB-94D1-27A6DE9B7155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB1A1990-BC5F-4DBB-94D1-27A6DE9B7155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB1A1990-BC5F-4DBB-94D1-27A6DE9B7155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7012711A-30AF-478A-BF69-FB23F072F586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7012711A-30AF-478A-BF69-FB23F072F586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7012711A-30AF-478A-BF69-FB23F072F586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7012711A-30AF-478A-BF69-FB23F072F586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

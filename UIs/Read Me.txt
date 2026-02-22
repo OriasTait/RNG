@@ -1,0 +1,6 @@
+This directory holds the following
+- All the user Interfaces used by this solution
+  - Console/
+  - Unity/        ← Unity solution lives here
+  - Web/
+  - WPF/

@@ -1,0 +1,89 @@
+/MyProduct                             ← Repo Root
+├── MyProduct.sln                  ← canonical product solution
+├── README.md
+├── .gitignore
+
+└── Builds/                    ← Deterministic outputs
+│   └── dll/
+│   └── unity/
+
+└── Docs/           ← Global authority
+│   ├── governance.md
+│   ├── standards.md
+│   ├── architecture.md
+│   ├── copilot-instructions.md
+│   ├── glossary.md  (New Document, no Anchor)
+│   └── decisions/
+│   │   ├── ADR-001-structure.md (New Document, no Anchor)
+
+└── SRC/                      ← All buildable code
+│   └── Core/                 ← Pure C# (no Unity refs)
+│   │   ├── MyProduct.Core.csproj
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this project
+│   │   ├── constraints.md   ← Specific to this project
+│   │   ├── tasks.md   ← Specific to this project
+│   │   └── ...
+│   │
+│   └── Infrastructure/       ← IO, network, persistence
+│   │   ├── MyProduct.Infrastructure.csproj
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this project
+│   │   ├── constraints.md   ← Specific to this project
+│   │   ├── tasks.md   ← Specific to this project
+│   │   └── ...
+│   │
+│   └── Contracts/
+│   │   ├── Contracts.csproj
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this project
+│   │   ├── constraints.md   ← Specific to this project
+│   │   ├── tasks.md   ← Specific to this project
+│   │   └── ...
+
+└── Tests/
+│   └── Core.Tests/
+│   └── Infrastructure.Tests/
+│   └── ...
+
+└── Tools/                    ← Automation glue
+│   ├── sync-dlls.ps1
+│   ├── sync-dlls.sh
+
+└── UIs/                   ← User Interfaces
+│   └── Console/
+│   │   ├── MyProduct.Console.csproj
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this project
+│   │   ├── constraints.md   ← Specific to this project
+│   │   ├── tasks.md   ← Specific to this project
+│   │   └── ...
+│   │
+│   └── Unity/                 ← Unity project lives here
+│   │   └── Assets/
+│   │   └── Scripts/       ← Thin adapters only
+│   │   └── ...
+│   │   └── Packages/
+│   │   └── ProjectSettings/
+│   │   ├── UnityApp.sln (Unity generated)
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this solution
+│   │   ├── constraints.md   ← Specific to this solution
+│   │   ├── tasks.md   ← Specific to this solution
+│   │   └── ...
+│   │
+│   └── Web/
+│   │   ├── MyProduct.Web.csproj
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this project
+│   │   ├── constraints.md   ← Specific to this project
+│   │   ├── tasks.md   ← Specific to this project
+│   │   └── ...
+│   │
+│   └── WPF/
+│   │   ├── MyProduct.Wpf.csproj
+│   │   ├── governance.md   ← proxy / anchor
+│   │   ├── requirements.md   ← Specific to this project
+│   │   ├── constraints.md   ← Specific to this project
+│   │   ├── tasks.md   ← Specific to this project
+│   │   └── ...
