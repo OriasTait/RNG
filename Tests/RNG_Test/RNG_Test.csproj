@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="Menus\Boolean_Menu.cs" />
     <Compile Include="Menus\Percentage_Menu.cs" />
     <Compile Include="Menus\Integer_Menu.cs" />

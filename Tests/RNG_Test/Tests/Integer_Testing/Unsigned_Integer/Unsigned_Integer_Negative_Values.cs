@@ -14,9 +14,8 @@ namespace RNG_Test
 {
 	partial class Integer_Testing
 	{
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S1481:Unused local variables should be removed", Justification = "<Pending>")]
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0059:Unnecessary assignment of a value", Justification = "<Pending>")]
-		private void Unsigned_Integer_Negative_Values()
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S2325:Methods and properties that don't access instance data should be static", Justification = "<Pending>")]
+        private void Unsigned_Integer_Negative_Values()
 		/*
 		===============================================================================================
 		PURPOSE:
@@ -38,10 +37,9 @@ namespace RNG_Test
 		===============================================================================================
 		*/
 		{
-			//=============
-			// Variables - Standard
-			//=============
-			RNG MyRandomNumber = new RNG();
+            //=============
+            // Variables - Standard
+            //=============
 			uint MinValue = uint.MinValue;
 			uint MaxValue = uint.MaxValue;
 			bool IsValid = true;  // Assume the value is valid
