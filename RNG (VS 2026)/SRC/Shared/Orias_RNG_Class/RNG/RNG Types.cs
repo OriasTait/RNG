@@ -20,12 +20,12 @@ namespace Orias_RNG
         //=============
         // Enumerations
         //=============
-        private enum RNGTypes
+        private enum RNG_Types
         {
             Class_Random,   // Microsoft Class Random
             Class_RNG_CSP,  // Microsoft RNGCryptoServiceProvider Class
             Class_RNG_RNG,  // Microsoft RandomNumberGenerator Class
             END             // End of the selections
-        }
+        } // private enum RNG_Types
     } // public partial class RNG
 } // namespace Orias_RNG

@@ -9,14 +9,22 @@
     <Import_RootNamespace>Orias_RNG_Class</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Choose RNG Process\Choose Process.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Number\Generate Number.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Boolean.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - MS RNG\MS RNG.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\Is In Range.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG\Private Fields.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG\Public Attribute Methods.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG_Status.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNGTypes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\Is Fair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG Types.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Verify MinMax Parameters\Verify MinMax Parameters - Long.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Generate\" />
+    <Folder Include="$(MSBuildThisFileDirectory)RNG - Crypto Service Provider\" />
+    <Folder Include="$(MSBuildThisFileDirectory)RNG - MS Random\" />
   </ItemGroup>
 </Project>

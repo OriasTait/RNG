@@ -27,7 +27,12 @@ namespace Testing_NS21
             // Setup Environment
             //=============
             Con.WriteLine("Testing RNG_NS21 build of RNG class.");
-            Con.WriteLine("Random Number: " + My_RNG.Fred());
+            Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
 
             //=============
             // Body

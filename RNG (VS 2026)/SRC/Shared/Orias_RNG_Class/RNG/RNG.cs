@@ -43,11 +43,5 @@ namespace Orias_RNG
             // Ensure the message is empty
             RNG_Message = string.Empty;
         } // ~RNG()
-
-        public int Fred()
-        {
-            // Method logic here
-            return 42; // Example return value
-        } // public int Fred()
     } // public partial class RNG
 } // namespace Orias_RNG
