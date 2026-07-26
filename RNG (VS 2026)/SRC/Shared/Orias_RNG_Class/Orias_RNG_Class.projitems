@@ -9,6 +9,9 @@
     <Import_RootNamespace>Orias_RNG_Class</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Orias_RNG.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)RNG\" />
   </ItemGroup>
 </Project>

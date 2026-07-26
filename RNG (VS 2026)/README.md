@@ -1,23 +1,21 @@
 # Overview
 This is the Random Number Generator (RNG) that is used within all of the applications created by
-Orias LLC.  In order to simulate as close to true randomness as possible, it randomly decides
-which of the random engines are used, and then generates the random number using the selected method.
+Orias LLC that use any kind of random number generation.  In order to simulate as close to true
+randomness as possible, it randomly decides which of the random engines are used, and then
+generates the random number using the selected method.
 
 # How to compile
-This was created in Microsoft Visual Studio Community 2026.  Open the file RNG.slnx in Visual Studio and compile the project.
+This was created in Microsoft Visual Studio Community 2026.  Open the file RNG.slnx in Visual
+Studio and compile the solution.
 
 ## Development Notes
 At Orias LLC, we have multiple solutions at varying .NET versions.  In order to avoid having to recreate the code in each
 solution, we are leveraging the ability to share code between multiple projects.  This solution is no different, the projects
 included here are:
 - RNG_NS21 => A .NET Standard 2.1 class library that is used by our Unity applications.
-- RNG_N10  => A .NET 10 class library that is used by our .NET 10 applications.
+- RNG_N09  => A .NET 9 class library that is used by our .NET 9 applications.
 
 # ==============
-# RNG
-This is the Random Number Generator (RNG) that is used within my applications.  It is a collection of different methods
-of generating a random number. Every time a number is generated, it will randomly select which of these methods are used;
-and then generate the random number using the selected method.
 
 The following methods are in use:
 - [Microsoft Random Class](https://learn.microsoft.com/en-us/dotnet/api/system.random)

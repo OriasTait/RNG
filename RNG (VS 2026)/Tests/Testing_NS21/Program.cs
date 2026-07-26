@@ -1,9 +1,14 @@
 ﻿using System;
 using Orias_RNG;
 
+//=============
+// Aliases
+//=============
+using Con = System.Console;
+
 namespace Testing_NS21
 {
-    class Program
+    partial class Program
     {
         static void Main(/*string[] args*/)
         /*
@@ -19,9 +24,19 @@ namespace Testing_NS21
             RNG My_RNG = new RNG();
 
             //=============
+            // Setup Environment
+            //=============
+            Con.WriteLine("Testing RNG_NS21 build of RNG class.");
+            Con.WriteLine("Random Number: " + My_RNG.Fred());
+
+            //=============
             // Body
             //=============
-            Console.WriteLine("Hello, World!");
+
+            //=============
+            // Cleanup Environment
+            //=============
+            Con.ReadKey();
         } // static void Main(/*string[] args*/)
-    } // class Program
+    } // partial class Program
 } // namespace Testing_NS21

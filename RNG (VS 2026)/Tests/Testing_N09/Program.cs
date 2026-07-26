@@ -1,7 +1,12 @@
 ﻿using System;
 using Orias_RNG;
 
-namespace Testing_N10
+//=============
+// Aliases
+//=============
+using Con = System.Console;
+
+namespace RNG_N09
 {
     class Program
     {
@@ -9,7 +14,7 @@ namespace Testing_N10
         /*
         ===========================================================================================
         PURPOSE:
-        Test the NETSTANDARD 1.0 build of the RNG class.
+        Test the NET 9.0 build of the RNG class.
         ===========================================================================================
         */
         {
@@ -19,9 +24,19 @@ namespace Testing_N10
             RNG My_RNG = new RNG();
 
             //=============
+            // Setup Environment
+            //=============
+            Con.WriteLine("Testing RNG_NS21 build of RNG class.");
+            Con.WriteLine("Random Number: " + My_RNG.Fred());
+
+            //=============
             // Body
             //=============
-            Console.WriteLine("Hello, World!");
+
+            //=============
+            // Cleanup Environment
+            //=============
+            Con.ReadKey();
         } // static void Main(/*string[] args*/)
     } // class Program
-} // namespace Testing_N10
+} // namespace RNG_N09
