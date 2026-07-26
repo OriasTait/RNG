@@ -9,9 +9,14 @@
     <Import_RootNamespace>Orias_RNG_Class</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\Private Fields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\Public Attribute Methods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG_Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG\RNGTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG\RNG.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)RNG\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Generate\" />
   </ItemGroup>
 </Project>

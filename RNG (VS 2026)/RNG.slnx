@@ -1,4 +1,8 @@
 <Solution>
+  <Folder Name="/Docs/" />
+  <Folder Name="/Docs/Requirements/">
+    <File Path="Docs/Requirements/Requirements.md" />
+  </Folder>
   <Folder Name="/Scripts/">
     <Project Path="Scripts/PowerShell/PowerShell.pssproj" Type="f5034706-568f-408a-b7b3-4d38c6db8a32" Id="6cafc0c6-a428-4d30-a9f9-700e829fea51" />
   </Folder>

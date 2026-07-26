@@ -21,7 +21,7 @@ namespace Testing_NS21
             //=============
             // Variables - Standard
             //=============
-            RNG My_RNG = new RNG();
+            RNG My_RNG = new ();
 
             //=============
             // Setup Environment
