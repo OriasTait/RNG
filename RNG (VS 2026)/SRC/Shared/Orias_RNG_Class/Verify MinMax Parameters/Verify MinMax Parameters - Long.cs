@@ -7,6 +7,7 @@ namespace Orias_RNG
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S2325:Methods and properties that don't access instance data should be static", Justification = "<Pending>")]
         private void Verify_MaxMin_Parameters(ref long MinValue, ref long MaxValue)
         /*
         ===============================================================================================

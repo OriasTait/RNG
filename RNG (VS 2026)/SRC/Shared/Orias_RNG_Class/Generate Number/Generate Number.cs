@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 
+//=============
+// Aliases
+//=============
+using App = System.Threading.Thread;
+
 namespace Orias_RNG
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
-        private long Generate_Number(long MinValue, long MaxValue)
+        private long Generate_Number(long Min_Value, long Max_Value)
         /*
         ===============================================================================================
         PURPOSE:
@@ -29,14 +34,16 @@ namespace Orias_RNG
             // Variables - Standard
             //=============
             long Results = 0;
+            byte Min_Value_Wait = 1;
+            byte Max_Value_Wait = 21;
 
             //=============
             // Setup Environment
             //=============
-            Verify_MaxMin_Parameters(ref MinValue, ref MaxValue);
+            Verify_MaxMin_Parameters(ref Min_Value, ref Max_Value);
 
             // Check if all values are expected to be positive
-            Positive_Only = (MinValue >= 0);
+            Positive_Only = (Min_Value >= 0);
 
             //=============
             // Body
@@ -48,15 +55,24 @@ namespace Orias_RNG
             switch (RNGProcess)
             {
                 case (int)RNG_Types.Class_Random:
-                    Results = MS_RNG(MinValue, MaxValue);
+                    Results = MS_RNG(Min_Value, Max_Value);
+
+                    // wait up to 20 miliseconds (1000 => 1 second) using the same generator to avoid duplicate numbers
+                    App.Sleep((int)MS_RNG(Min_Value_Wait, Max_Value_Wait));
                     break;
 
                 case (int)RNG_Types.Class_RNG_CSP:
-                    //Results = MS_RNG_CSP(MinValue, MaxValue);
+                    Results = MS_RNG_CSP(Min_Value, Max_Value);
+
+                    // wait up to 20 miliseconds (1000 => 1 second) using the same generator to avoid duplicate numbers
+                    App.Sleep((int)MS_RNG_CSP(Min_Value_Wait, Max_Value_Wait));
                     break;
 
                 case (int)RNG_Types.Class_RNG_RNG:
-                    //Results = MS_RNG_RNG(MinValue, MaxValue);
+                    Results = MS_Random(Min_Value, Max_Value);
+
+                    // wait up to 20 miliseconds (1000 => 1 second) using the same generator to avoid duplicate numbers
+                    App.Sleep((int)MS_Random(Min_Value_Wait, Max_Value_Wait));
                     break;
             }
 

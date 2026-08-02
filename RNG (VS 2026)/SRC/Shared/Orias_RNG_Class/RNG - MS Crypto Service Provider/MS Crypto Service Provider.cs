@@ -6,18 +6,18 @@ using System.Text;
 //=============
 // Aliases
 //=============
-using App = System.Threading.Thread;
+//using App = System.Threading.Thread;
 
 namespace Orias_RNG
 {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
-        private long MS_RNG(long MinValue, long MaxValue)
+        private long MS_RNG_CSP(long MinValue, long MaxValue)
         /*
         ===============================================================================================
         PURPOSE:
-        Use the Microsoft RandomNumberGenerator class to generate a random number from the given
+        Use the Microsoft RNGCryptoServiceProvider class to generate a random number from the given
         MinValue up to (and including) the MaxValue.
         -----------------------------------------------------------------------------------------------
         PARAMETERS:
@@ -36,16 +36,15 @@ namespace Orias_RNG
             //=============
             long Offset = MinValue;                         // Offset from 0
             byte[] RandomNumber = new byte[8];              // Long data types => 8 bytes
+//#pragma warning disable SYSLIB0023 // Type or member is obsolete
+            RNGCryptoServiceProvider RNGCSP = new RNGCryptoServiceProvider();
+//#pragma warning restore SYSLIB0023 // Type or member is obsolete
             long Selections = (MaxValue - MinValue) + 1;    // The number of selections possible
 
             //=============
             // Setup Environment
             //=============
-            // Create a new instance of the RandomNumberGenerator class
-            RandomNumberGenerator RNG = RandomNumberGenerator.Create();
-
-            // Start by assuming the number is not valid
-            Valid_Number = false;   
+            Valid_Number = false;   // Start by assuming the number is not valid
 
             //=============
             // Body
@@ -53,7 +52,7 @@ namespace Orias_RNG
             do
             {
                 // Fill the array with a random value.
-                RNG.GetBytes(RandomNumber);
+                RNGCSP.GetBytes(RandomNumber);
 
                 // Convert to a long number
                 Long_Rand = BitConverter.ToInt64(RandomNumber, 0);
@@ -77,6 +76,6 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // private long MS_RNG(long MinValue, long MaxValue)
+        } // private long MS_RNG_CSP(long MinValue, long MaxValue)
     } // public partial class RNG
 } // namespace Orias_RNG

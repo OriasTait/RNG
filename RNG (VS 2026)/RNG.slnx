@@ -1,5 +1,8 @@
 <Solution>
   <Folder Name="/Docs/" />
+  <Folder Name="/Docs/Logs/">
+    <File Path="Docs/Logs/Update History.md" />
+  </Folder>
   <Folder Name="/Docs/Requirements/">
     <File Path="Docs/Requirements/Requirements.md" />
   </Folder>
