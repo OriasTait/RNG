@@ -6,7 +6,7 @@ using Orias_RNG;
 //=============
 using Con = System.Console;
 
-namespace RNG_N09
+namespace Testing_N09
 {
     class Program
     {
@@ -21,13 +21,13 @@ namespace RNG_N09
             //=============
             // Variables - Standard
             //=============
-            RNG My_RNG = new RNG();
+            RNG My_RNG = new();
 
             //=============
             // Setup Environment
             //=============
             Con.WriteLine("Testing RNG_NS21 build of RNG class.");
-            Con.WriteLine("Random Number: " + My_RNG.Generate());
+            Con.WriteLine("Random Number: " + My_RNG.Generate(false, true));
 
             //=============
             // Body
@@ -36,7 +36,8 @@ namespace RNG_N09
             //=============
             // Cleanup Environment
             //=============
+            Con.WriteLine("\nPress any key to exit.");
             Con.ReadKey();
         } // static void Main(/*string[] args*/)
     } // class Program
-} // namespace RNG_N09
+} // namespace Testing_N09

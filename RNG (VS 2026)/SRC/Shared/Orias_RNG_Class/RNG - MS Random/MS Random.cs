@@ -8,6 +8,7 @@ namespace Orias_RNG
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0090:Use 'new(...)'", Justification = "<Pending>")]
         private long MS_Random(long MinValue, long MaxValue)
         /*
         ===============================================================================================

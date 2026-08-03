@@ -12,7 +12,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Choose RNG Process\Choose Process.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate Number\Generate Number.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Boolean.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)RNG - MS Crypto Service Provider\MS Crypto Service Provider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG - MS Random\MS Random.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG - MS RNG\MS RNG.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Constants.cs" />

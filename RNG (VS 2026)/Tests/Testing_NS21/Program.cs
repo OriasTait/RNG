@@ -8,7 +8,7 @@ using Con = System.Console;
 
 namespace Testing_NS21
 {
-    partial class Program
+    static partial class Program
     {
         static void Main(/*string[] args*/)
         /*
@@ -41,7 +41,8 @@ namespace Testing_NS21
             //=============
             // Cleanup Environment
             //=============
+            Con.WriteLine("\nPress any key to exit.");
             Con.ReadKey();
         } // static void Main(/*string[] args*/)
-    } // partial class Program
+    } // static partial class Program
 } // namespace Testing_NS21

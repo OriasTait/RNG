@@ -61,13 +61,6 @@ namespace Orias_RNG
                     App.Sleep((int)MS_RNG(Min_Value_Wait, Max_Value_Wait));
                     break;
 
-                case (int)RNG_Types.Class_RNG_CSP:
-                    Results = MS_RNG_CSP(Min_Value, Max_Value);
-
-                    // wait up to 20 miliseconds (1000 => 1 second) using the same generator to avoid duplicate numbers
-                    App.Sleep((int)MS_RNG_CSP(Min_Value_Wait, Max_Value_Wait));
-                    break;
-
                 case (int)RNG_Types.Class_RNG_RNG:
                     Results = MS_Random(Min_Value, Max_Value);
 
