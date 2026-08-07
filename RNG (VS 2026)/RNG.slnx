@@ -24,6 +24,7 @@
     <Project Path="SRC/Shared/Orias_RNG_Class/Orias_RNG_Class.shproj" Id="ea36aba5-2b02-4d5a-b2ba-b4a70e71f910" />
   </Folder>
   <Folder Name="/Tests/">
+    <Project Path="Algorithm Testing/Algorithm Testing.csproj" Id="bd6aca2c-741d-4005-b78e-9dcc29be4389" />
     <Project Path="Tests/Testing_N09/Testing_N09.csproj" Id="12c59a24-5391-4edf-ab59-6d370e310b1b" />
     <Project Path="Tests/Testing_NS21/Testing_NS21.csproj" Id="e8a505b5-6eec-474d-a01d-dd9e658a725c" />
   </Folder>

@@ -5,7 +5,7 @@ randomness as possible, it randomly decides which of the random engines are used
 generates the random number using the selected method.
 
 # Methods
-The following methods are in use:
+The following algorithms are in use:
 - [Microsoft Random Class](https://learn.microsoft.com/en-us/dotnet/api/system.random)
 - [Microsoft RandomNumberGenerator Class](https://learn.microsoft.com/en-us/dotnet/api/system.security.cryptography.randomnumbergenerator)
 

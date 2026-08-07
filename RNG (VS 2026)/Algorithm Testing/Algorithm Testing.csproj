@@ -1,12 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Algorithm_Testing</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>2.0.0</Version>
   </PropertyGroup>
-
-  <Import Project="..\Shared\Orias_RNG_Class\Orias_RNG_Class.projitems" Label="Shared" />
 
 </Project>
