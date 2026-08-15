@@ -34,6 +34,17 @@ namespace Testing_NS21
             Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
             Con.WriteLine("Random Number: " + My_RNG.Generate(true, false));
 
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+            Con.WriteLine("Random Number: " + My_RNG.Generate(-10, 10));
+
             //=============
             // Body
             //=============

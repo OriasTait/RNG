@@ -24,6 +24,7 @@ namespace Orias_RNG
         {
             Class_Random,   // Microsoft Class Random
             Class_RNG_RNG,  // Microsoft RandomNumberGenerator Class
+            Xoshiro256,     // Xoshiro256** Algorithm
             END             // End of the selections
         } // private enum RNG_Types
     } // public partial class RNG
