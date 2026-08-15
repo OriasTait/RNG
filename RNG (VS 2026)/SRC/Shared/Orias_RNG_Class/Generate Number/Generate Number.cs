@@ -34,8 +34,10 @@ namespace Orias_RNG
             // Variables - Standard
             //=============
             long Results = 0;
-            byte Min_Value_Wait = 1;
-            byte Max_Value_Wait = 5; // Original value 21
+
+            // miliseconds to wait before returning a value
+            int Wait_Min = 1;
+            int Wait_Max = 10;
 
             //=============
             // Setup Environment
@@ -51,9 +53,9 @@ namespace Orias_RNG
             // Choose a process
             int RNGProcess = Choose_Process();
 
-            // Debug Only
             //RNGProcess = (int)RNG_Types.Xoshiro256;
-            Console.Write($"RNGProcess: {RNGProcess}: ");
+
+            Console.Write($"RNGProcess: {RNGProcess} ({(RNG_Types)RNGProcess})");
 
             // Use the chosen method
             switch (RNGProcess)
@@ -61,22 +63,22 @@ namespace Orias_RNG
                 case (int)RNG_Types.Class_Random:
                     Results = MS_RNG(Min_Value, Max_Value);
 
-                    // Wait to avoid duplicate numbers
-                    App.Sleep((int)MS_RNG(Min_Value_Wait, Max_Value_Wait));
+                    // Use the same engine to wait a random amount of time
+                    App.Sleep((int)MS_RNG(Wait_Min, Wait_Max));
                     break;
 
                 case (int)RNG_Types.Class_RNG_RNG:
                     Results = MS_Random(Min_Value, Max_Value);
 
-                    // Wait to avoid duplicate numbers
-                    App.Sleep((int)MS_Random(Min_Value_Wait, Max_Value_Wait));
+                    // Use the same engine to wait a random amount of time
+                    App.Sleep((int)MS_Random(Wait_Min, Wait_Max));
                     break;
 
                 case (int)RNG_Types.Xoshiro256:
                     Results = Xoshiro256(Min_Value, Max_Value);
 
-                    // Wait to avoid duplicate numbers
-                    App.Sleep((int)Xoshiro256(Min_Value_Wait, Max_Value_Wait));
+                    // Use the same engine to wait a random amount of time
+                    App.Sleep((int)Xoshiro256(Wait_Min, Wait_Max));
                     break;
             }
 

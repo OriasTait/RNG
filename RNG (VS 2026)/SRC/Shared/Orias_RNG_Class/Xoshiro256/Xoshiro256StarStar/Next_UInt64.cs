@@ -25,46 +25,36 @@ namespace Orias_RNG
         ===============================================================================================
          */
         {
-            // =============
-            // Fields - Standard
-            // =============
-            private ulong s0, s1, s2, s3;
-
-            public Xoshiro256StarStar(ulong seed)
+            private ulong Next_UInt64()
             /*
             ===============================================================================================
             PURPOSE:
-            This constructor initializes the xoshiro256** PRNG with a given seed value. It uses the
-            SplitMix64 algorithm to generate the initial state of the PRNG.
-            -----------------------------------------------------------------------------------------------
-            PARAMETERS:
-            - seed => The seed value to initialize the PRNG
+            This method generates the next 64-bit unsigned integer in the xoshiro256** PRNG sequence.
             ===============================================================================================
             */
             {
                 //=============
-                // Variables - Standard
-                //=============
-                // Use SplitMix64 to generate the initial state from the seed
-                var sm = new SplitMix64(seed);
-
-                //=============
-                // Setup Environment
-                //=============
-                // Generate four 64-bit unsigned integers for the state
-                s0 = sm.Next_UInt64();
-                s1 = sm.Next_UInt64();
-                s2 = sm.Next_UInt64();
-                s3 = sm.Next_UInt64();
-
-                //=============
                 // Body
                 //=============
-                // Ensure that the state is not all zeros, which would be invalid for the
-                // xoshiro256** algorithm
-                if ((s0 | s1 | s2 | s3) == 0)
-                    s0 = 0x9E3779B97F4A7C15UL;
-            } // public Xoshiro256StarStar(ulong seed)
+                // Calculate the next output value using the xoshiro256** algorithm
+                ulong Result = RotL(s1 * 5, 7) * 9;
+                ulong t = s1 << 17;
+
+                // Update the internal state using bitwise operations
+                s2 ^= s0;
+                s3 ^= s1;
+                s1 ^= s2;
+                s0 ^= s3;
+
+                // Update s2 and s3 with the temporary value t and a rotation
+                s2 ^= t;
+                s3 = RotL(s3, 45);
+
+                //=============
+                // Cleanup Environment
+                //=============
+                return Result;
+            } // private ulong Next_UInt64()
         } // private sealed partial class Xoshiro256StarStar
     } // public partial class RNG
 } // namespace Orias_RNG

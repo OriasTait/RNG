@@ -35,6 +35,18 @@ namespace Orias_RNG
             long Max;
 
             //=============
+            // Setup Environment
+            //=============
+            if (MinValue < -922337203685477580)
+            {
+                throw new ArgumentOutOfRangeException(nameof(MinValue), "MinValue must be between -922,337,203,685,477,580 and 922,337,203,685,477,580.");
+            }
+            if (MaxValue > 922337203685477580)
+            {
+                throw new ArgumentOutOfRangeException(nameof(MaxValue), "MaxValue must be between -922,337,203,685,477,580 and 922,337,203,685,477,580.");
+            }
+
+            //=============
             // Body
             //=============
             if (MinValue < MaxValue)

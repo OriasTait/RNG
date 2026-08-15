@@ -120,7 +120,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for Signed Integers
+        - This method is for Signed Integers; range -2,147,483,648 to 2,147,483,647
         ===============================================================================================
         */
         {
@@ -151,7 +151,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for Unsigned Integers
+        - This method is for Unsigned Integers; range 0 to 4,294,967,295
         ===============================================================================================
         */
         {
@@ -182,7 +182,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for short
+        - This method is for short; range -32,768 to 32,767
         ===============================================================================================
         */
         {
@@ -213,7 +213,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for unsigned short
+        - This method is for unsigned short; range 0 to 65,535
         ===============================================================================================
         */
         {
@@ -244,7 +244,7 @@ namespace Orias_RNG
         - MaxValue  => The maximum value to return
         -----------------------------------------------------------------------------------------------
         NOTES:
-        - This method is for unsigned short
+        - This method is for long; range -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
         ===============================================================================================
         */
         {
@@ -261,7 +261,7 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // public ushort Generate(ulong MinValue, ulong MaxValue)
+        } // public ulong Generate(long MinValue, long MaxValue)
 
     } // public class RNG
 } // namespace Orias_RNG
