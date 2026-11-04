@@ -1,5 +1,0 @@
-This directory holds the following
-- Test scripts and/or solutions for each aspect of the solution
-  For Example:
-  - Core.Tests
-  - Infrastructure.Tests
