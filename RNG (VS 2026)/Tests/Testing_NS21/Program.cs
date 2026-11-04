@@ -85,33 +85,67 @@ namespace Testing_NS21
              */
 
             //long Min_Long = -9223372036854775800;
-            long Min_Long = -922337203685477580;
-            long Max_Long = 922337203685477580;
-            Con.WriteLine("\nGenerating Long Values");
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
-            Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //long Min_Long = -922337203685477580;
+            //long Max_Long = 922337203685477580;
+            //Con.WriteLine("\nGenerating Long Values");
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+            //Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Long, Max_Long));
+
+            // Generate Percentage Values
+            decimal Min_Percentage = 0.0m;
+            decimal Max_Percentage = 100.00m;
+            byte Precision = 3; // Number of decimal places
+            Con.WriteLine("\nGenerating Percentage Values of precision " + Precision);
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+            Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+
+            // Generate Decimal Values
+            //decimal Min_Decimal = 1.0m;
+            //decimal Max_Decimal = 1000.00m;
+
+            //Min_Decimal = 123.00m;
+            //Max_Decimal = 156.56m;
+            //byte Precision = 5; // Number of decimal places
+
+            //Con.WriteLine("\nGenerating Decimal Values of precision " + Precision);
+
+            //Con.WriteLine("Random Number: " + My_RNG.Generate_Decimal(Min_Decimal, Max_Decimal, Precision));
 
             //=============
             // Cleanup Environment

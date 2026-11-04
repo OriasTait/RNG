@@ -13,8 +13,8 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/SRC/" />
-  <Folder Name="/SRC/RNG .NET 09/">
-    <Project Path="SRC/RNG_N09/RNG_N09.csproj" Id="9e05a550-4f72-4cf9-b0bc-5ec1b4e7a479" />
+  <Folder Name="/SRC/RNG .NET 10/">
+    <Project Path="SRC/RNG_N09/RNG_N10.csproj" Id="9e05a550-4f72-4cf9-b0bc-5ec1b4e7a479" />
   </Folder>
   <Folder Name="/SRC/RNG Netstandard 2.1/">
     <Project Path="SRC/RNG_NS21/RNG_NS21.csproj" Id="f410edb5-be77-4b23-9554-0972189d5cbf" />
@@ -25,7 +25,7 @@
   </Folder>
   <Folder Name="/Tests/">
     <Project Path="Algorithm Testing/Algorithm Testing.csproj" Id="bd6aca2c-741d-4005-b78e-9dcc29be4389" />
-    <Project Path="Tests/Testing_N09/Testing_N09.csproj" Id="12c59a24-5391-4edf-ab59-6d370e310b1b" />
+    <Project Path="Tests/Testing_N09/Testing_N10.csproj" Id="12c59a24-5391-4edf-ab59-6d370e310b1b" />
     <Project Path="Tests/Testing_NS21/Testing_NS21.csproj" Id="e8a505b5-6eec-474d-a01d-dd9e658a725c" />
   </Folder>
 </Solution>

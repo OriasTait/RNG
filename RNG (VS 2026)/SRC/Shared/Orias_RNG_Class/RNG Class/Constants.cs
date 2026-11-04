@@ -9,17 +9,18 @@ namespace Orias_RNG
     /*
     ===============================================================================================
     PURPOSE:
-    Generate a random number.
-    -----------------------------------------------------------------------------------------------
-    NOTES:
-    - It is assumed that the return value, MinValue and MaxValue of a generated number will all be
-      the same type.
+    Define constants used in the RNG class.
     ===============================================================================================
     */
     {
         //=============
         // Constants
         //=============
+        // Long Constants
+        private const long Long_Min_Value = -922337203685477580; // Minimum long value
+        private const long Long_Max_Value = 922337203685477580;  // Maximum long value
+
+        // Percentage Constants
         private const byte Percentage_Max_Length = 18;  // Maximum string length of a percentage value
         private const byte Percentage_Min_Value = 0;    // Minimum value of a percentage value
         private const byte Percentage_Max_Value = 100;  // Maximum value of a percentage value

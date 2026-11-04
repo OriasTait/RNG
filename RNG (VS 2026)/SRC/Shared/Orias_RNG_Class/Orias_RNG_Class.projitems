@@ -11,10 +11,13 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Choose RNG Process\Choose Process.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate Number\Generate Number.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Percentage\Verify Precision Value.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Percentage\Verify Min Max Values.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Byte Signed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Byte Unsigned.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Integer Unsigned.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Long Signed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)..\..\..\..\RNG %28VS 2026%29\SRC\Shared\Orias_RNG_Class\Generate Percentage\Generate Percentage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Short Unsigned.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Short Signed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Integer Signed.cs" />
@@ -29,7 +32,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Is Fair.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG Class\RNG Types.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)RNG Class\RNG.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Verify MinMax Parameters\Verify MinMax Parameters - Long.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Verify MinMax Parameters\Verify MinMax Parameters.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Xoshiro256\Create Crypto Seed.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Xoshiro256\Xoshiro256.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Xoshiro256\Xoshiro256StarStar\SplitMix64\Next UInt64.cs" />

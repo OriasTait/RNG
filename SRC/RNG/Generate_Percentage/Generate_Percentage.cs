@@ -38,7 +38,7 @@ namespace Orias_RNG
             // Variables - Standard
             //=============
             decimal Results = 0M;
-             string ResultsStr = string.Empty;
+            string ResultsStr = string.Empty;
             string MinValueStr = string.Empty;
             string MaxValueStr = string.Empty;
             int Decmal_Location = -1;
@@ -152,7 +152,7 @@ namespace Orias_RNG
 
                 // Save the results
                 Results = decimal.Parse(ResultsStr);
-            }
+            } // if (Status == RNG_Status.Success)
 
             //=============
             // Cleanup Environment

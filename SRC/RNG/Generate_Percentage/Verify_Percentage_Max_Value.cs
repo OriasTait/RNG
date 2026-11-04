@@ -37,7 +37,7 @@ namespace Orias_RNG
             {
                 Status = RNG_Status.Failure;
                 RNG_Message =
-                    "The minimum value must be a value " + Percentage_Min_Value + " to " + Percentage_Max_Value 
+                    "The maximum value must be a value " + Percentage_Min_Value + " to " + Percentage_Max_Value 
                     + ". The given value " + MaxValue + " is outside this range.";
             }
             
