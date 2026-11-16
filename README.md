@@ -75,13 +75,9 @@ The following C# data types are able to be randomly generated:
   - Because we use the long as the type to generate the random number, we are unable to generate the full
     range of long/System.Int64 and ulong/System.UInt64.
 
-# ==============
-
 The following data generation types were created:
-- Percentage	=> A decimal/System.Decimal number represented with a total of 18 characters (17 digits and 1 decimal)
+- Percentage => A decimal/System.Decimal number represented with a total of 18 characters (17 digits and 1 decimal)
   (Range: 0.0000000000000000 to 100.00000000000000)
 
-=============
-
 # How to compile
-This was created in Microsoft Visual Studio Community 2022.  Open the file RNG.sln in Visual Studio and compile the project.
+This was created in Microsoft Visual Studio Community 2026.  Open the file RNG.sln in Visual Studio and compile the project.
