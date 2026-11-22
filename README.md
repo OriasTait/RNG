@@ -32,6 +32,15 @@ The call is made using the following syntax: Generate(MinValue, MaxValue)
 
 The generated number is returned as the same data type as the MinValue and MaxValue parameters.
 
+### Example C#
+```csharp
+int Min_Int = -2147483648;
+int Max_Int = 2147483647;
+Con.WriteLine("\nGenerating Integer Values");
+Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Int, Max_Int));
+Con.WriteLine("Random Number: " + My_RNG.Generate(Min_Int, Max_Int));
+```
+
 ## Generate_Percentage
 Generate_Percentage is a public method that is used to generate a random number of the data type
 decimal/System.Decimal that behaves as a percentage.  This is a decimal number represented with a
@@ -43,6 +52,16 @@ The call is made using the following syntax: Generate_Percentage(MinValue, MaxVa
 - MinValue is the minimum value that can be generated.
 - MaxValue is the maximum value that can be generated.
 - Precision is the number of decimal places to return.
+
+### Example C#
+```csharp
+decimal Min_Percentage = 0.0m;
+decimal Max_Percentage = 100.00m;
+byte Precision = 3; // Number of decimal places
+Con.WriteLine("\nGenerating Percentage Values of precision " + Precision);
+Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+Con.WriteLine("Random Number: " + My_RNG.Generate_Percentage(Min_Percentage, Max_Percentage, Precision));
+```
 
 # Algorithms
 The following algorithms are in use to generate the random number:

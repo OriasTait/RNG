@@ -7,7 +7,7 @@ namespace Orias_RNG
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
-        public int Generate(int MinValue, int MaxValue, bool Show_RNG_Engine)
+        public int Generate(int MinValue, int MaxValue)
         /*
         ===============================================================================================
         PURPOSE:
@@ -16,7 +16,6 @@ namespace Orias_RNG
         PARAMETERS:
         - MinValue  => The minimum value to return
         - MaxValue  => The maximum value to return
-        - Show_RNG_Engine => If true, the RNG Engine will be displayed in the console
         -----------------------------------------------------------------------------------------------
         NOTES:
         - This method is for Signed Integers; range -2,147,483,648 to 2,147,483,647
@@ -27,7 +26,7 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            Generated_Number = Generate_Number(MinValue, MaxValue, Show_RNG_Engine);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a boolean
             int Results = int.Parse(Generated_Number.ToString());
@@ -36,6 +35,6 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // public int Generate()
+        } // public Generate(int MinValue, int MaxValue)
     } // public partial class RNG
 } // namespace Orias_RNG

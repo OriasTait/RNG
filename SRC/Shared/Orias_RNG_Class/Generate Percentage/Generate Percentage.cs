@@ -7,7 +7,7 @@ namespace Orias_RNG
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
-        public decimal Generate_Percentage(decimal MinValue, decimal MaxValue, byte Precision, bool Show_RNG_Engine)
+        public decimal Generate_Percentage(decimal MinValue, decimal MaxValue, byte Precision)
         /*
         ===============================================================================================
         PURPOSE:
@@ -18,7 +18,6 @@ namespace Orias_RNG
         - MinValue  => The minimum value to return
         - MaxValue  => The maximum value to return
         - Precision => The number of decimal places to return
-        - Show_RNG_Engine => If true, the RNG Engine will be displayed in the console
         -----------------------------------------------------------------------------------------------
         NOTES:
         - This method is for percentages; range 0 to 100.
@@ -134,7 +133,7 @@ namespace Orias_RNG
                 long MinValue_long = long.Parse(MinValueStr);
                 long MaxValue_long = long.Parse(MaxValueStr);
 
-                Results = Generate(MinValue_long, MaxValue_long, Show_RNG_Engine);
+                Results = Generate(MinValue_long, MaxValue_long);
             }
 
             // Prepare Results to be returned
@@ -160,6 +159,6 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // public decimal Generate_Percentage(decimal MinValue, decimal MaxValue, byte Precision, bool Show_RNG_Engine)
+        } // public decimal Generate_Percentage(decimal MinValue, decimal MaxValue, byte Precision)
     } // public partial class RNG
 } // namespace Orias_RNG

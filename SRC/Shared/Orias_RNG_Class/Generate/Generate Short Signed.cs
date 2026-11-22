@@ -7,7 +7,7 @@ namespace Orias_RNG
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Minor Code Smell", "S101:Types should be named in PascalCase", Justification = "<Pending>")]
     public partial class RNG
     {
-        public short Generate(short MinValue, short MaxValue, bool Show_RNG_Engine)
+        public short Generate(short MinValue, short MaxValue)
         /*
         ===============================================================================================
         PURPOSE:
@@ -17,7 +17,6 @@ namespace Orias_RNG
         PARAMETERS:
         - MinValue  => The minimum value to return
         - MaxValue  => The maximum value to return
-        - Show_RNG_Engine => If true, the RNG Engine will be displayed in the console
         -----------------------------------------------------------------------------------------------
         NOTES:
         - This method is for short integers; range -32,768 to 32,767
@@ -28,7 +27,7 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            Generated_Number = Generate_Number(MinValue, MaxValue, Show_RNG_Engine);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Integer
             short Results = short.Parse(Generated_Number.ToString());
@@ -37,6 +36,6 @@ namespace Orias_RNG
             // Cleanup Environment
             //=============
             return Results;
-        } // public short Generate(short MinValue, short MaxValue, bool Show_RNG_Engine)
+        } // public short Generate(short MinValue, short MaxValue)
     } // public partial class RNG
 } // namespace Orias_RNG

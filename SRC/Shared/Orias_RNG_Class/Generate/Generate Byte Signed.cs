@@ -28,7 +28,7 @@ namespace Orias_RNG
             // Body
             //=============
             // Generate the number
-            Generated_Number = Generate_Number(MinValue, MaxValue, Show_RNG_Engine);
+            Generated_Number = Generate_Number(MinValue, MaxValue);
 
             // Convert the number back to a Byte
             sbyte Results = SByte.Parse(Generated_Number.ToString());
