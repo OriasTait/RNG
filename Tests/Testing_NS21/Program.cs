@@ -1,5 +1,4 @@
-﻿using System;
-using Orias_RNG;
+﻿using Orias_RNG;
 
 //=============
 // Aliases
@@ -22,8 +21,6 @@ namespace Testing_NS21
             // Variables - Standard
             //=============
             RNG My_RNG = new();
-            //bool Show_RNG_Engine = true;
-            bool Show_RNG_Engine = false;
 
             //=============
             // Body
