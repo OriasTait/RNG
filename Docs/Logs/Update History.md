@@ -1,4 +1,8 @@
-# Version 3.0
+# Version 3.1.0
+## Bug Fixes
+1. Updated the path naming of the .NET 10 project to reflect the .NET version being used.
+
+# Version 3.0.0
 ## Application Updates
 1. The method Microsoft RNGCryptoServiceProvider was removed from the Random Number Generator (RNG) application.
 This Is replaced by the RandomNumberGenerator class that is already being used.  The formula for generating a

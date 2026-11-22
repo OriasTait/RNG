@@ -14,7 +14,7 @@
   </Folder>
   <Folder Name="/SRC/" />
   <Folder Name="/SRC/RNG .NET 10/">
-    <Project Path="SRC/RNG_N09/RNG_N10.csproj" Id="9e05a550-4f72-4cf9-b0bc-5ec1b4e7a479" />
+    <Project Path="SRC/RNG_N10/RNG_N10.csproj" />
   </Folder>
   <Folder Name="/SRC/RNG Netstandard 2.1/">
     <Project Path="SRC/RNG_NS21/RNG_NS21.csproj" Id="f410edb5-be77-4b23-9554-0972189d5cbf" />
