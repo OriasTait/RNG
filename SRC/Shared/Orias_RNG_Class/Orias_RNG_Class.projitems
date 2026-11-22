@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>ea36aba5-2b02-4d5a-b2ba-b4a70e71f910</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Orias_RNG_Class</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Choose RNG Process\Choose Process.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Number\Generate Number.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Percentage\Verify Precision Value.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Percentage\Verify Min Max Values.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Byte Signed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Byte Unsigned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Integer Unsigned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Long Signed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate Percentage\Generate Percentage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Short Unsigned.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Short Signed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Integer Signed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Generate\Generate Boolean.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - MS Random Number Generator\MS Random Number Generator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - MS Random\MS Random.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Is In Range.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Private Fields.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Public Attribute Methods.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\RNG Status.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\Is Fair.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\RNG Types.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG Class\RNG.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Verify MinMax Parameters\Verify MinMax Parameters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Create Crypto Seed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\SplitMix64\Next UInt64.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\SplitMix64\SplitMix64.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\Next_UInt64.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\RotL.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\FromOrdered.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\ToOrdered.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\Next_Int64_Inclusive.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\Xoshiro256StarStar - Copy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RNG - Xoshiro256\Xoshiro256StarStar\Xoshiro256StarStar.cs" />
+  </ItemGroup>
+</Project>

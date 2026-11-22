@@ -1,0 +1,7 @@
+This directory holds the following
+- Where the results of the builds go for this solution.
+  - Consoles
+  - WPF
+  - DLLs
+  - Unity
+  - etc.
